@@ -1,11 +1,9 @@
 import express from "express";
 const app = express();
 import route1 from "./routes/route1";
-
-
-// app.get('/', (_, res) => {
-//     res.send('Hello this is the main route!');
-// })
+/* 
+v1: Tell chat gpt to write a cover letter based on a text prompt
+*/
 
 app.use('/', route1);
 
