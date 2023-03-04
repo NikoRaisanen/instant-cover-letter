@@ -1,0 +1,1 @@
+# ai-cover-letter-generator
