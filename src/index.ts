@@ -1,16 +1,21 @@
-import express from "express";
-const app = express();
-import route1 from "./routes/route1";
-/* 
-v1: Tell chat gpt to write a cover letter based on a text prompt
-*/
+import { generateCoverLetter } from "./services/openai";
+import Constants from "./Constants";
+const { GRAMMARLY_JD } = Constants;
 
-app.use('/', route1);
+exports.handler = async (event: { body: string; }, _: any) => {
+    const body = JSON.parse(event.body);
+    const prompt = body.prompt;
 
-app.get('/test', (_, res) => {
-    res.send('yoyo test route');
-})
+    const res = await generateCoverLetter(GRAMMARLY_JD, prompt);
+    const coverLetter = res?.data?.choices[0]?.message?.content;
+    
+    if (!coverLetter) {
+        throw Error("No choices returned from OpenAI");
+    }
 
-const port = process.env.PORT || 3001;
-
-app.listen(port, () => console.log(`Listening on PORT ${port}`));
+    const response = {
+        statusCode: 200,
+        body: coverLetter,
+    };
+    return response;
+};

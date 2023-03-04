@@ -28,5 +28,12 @@
       "checkJs": true,
       "outDir": "build",
       "rootDir": "./src"
-    }
+    },
+    "include": [
+      "src"
+    ],
+    "exclude": [
+      "/tests",
+      "jest.config.ts"
+    ]
   }

@@ -1,15 +1,19 @@
 import { Configuration, OpenAIApi } from "openai";
-import { GPT_MODEL, SYSTEM_PROMPT } from "../Constants";
+import Constants from "../Constants";
+const { GPT_MODEL, SYSTEM_PROMPT } = Constants;
 
 const buildOpenAi = async() => {
+    const apiKey: string = process.env.OPENAI_API_KEY ?? "";
+    console.log(`apiKey: ${apiKey}`);
+    console.log(typeof apiKey);
     const configuration = new Configuration({
-        apiKey: process.env.OPENAI_API_KEY,
+        apiKey,
     });
     const openai = new OpenAIApi(configuration);
     return openai;
 }
 
-const generateCoverLetter = async (jobDescription: string, prompt: string) => {
+export const generateCoverLetter = async (jobDescription: string, prompt: string) => {
     const openai = await buildOpenAi();
     const completion = await openai.createChatCompletion({
         model: GPT_MODEL,
@@ -26,10 +30,5 @@ const generateCoverLetter = async (jobDescription: string, prompt: string) => {
             }
         ]
     });
-    return completion
+    return completion;
 }
-
-module.exports = {
-    buildOpenAi,
-    generateCoverLetter,
-};
