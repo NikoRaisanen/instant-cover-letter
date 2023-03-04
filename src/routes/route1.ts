@@ -1,21 +1,13 @@
 import express from "express";
 const router = express.Router();
-import { buildOpenAi } from "../services/openai";
-import Constants from "../Constants";
+import { generateCoverLetter } from "../services/openai";
+import { GRAMMARLY_JD } from "../Constants";
 
-router.get('/route1', async (_, res) => {
-    console.log('route 1 log');
-    console.log(Constants)
-    const openai = await buildOpenAi();
-    const response = await openai.createChatCompletion({
-        model: Constants.GPT_MODEL,
-        temperature: 0.3,
-        messages: [{role: "user", content: "Write 2 paragraphs of a cover letter for a software engineer with 3 years of experience who has security experience and wants to work on ai projects"}]
-    })
-    console.log(response.data.choices)
-    console.log(response.usage);
+router.get('/generate-cover-letter', async (_, res) => {
+    const prompt = "I have 5 years of experience with web development and am familiar with popular frameworks like react, angular, node and many more. I also have experience with end-to-end testing and telemetry"
+    const response = await generateCoverLetter(GRAMMARLY_JD, prompt)
     console.log(response.data.usage)
-    res.send('Hey you hit route1!');
+    res.send(response.data.choices[0].message.content);
 });
 
 export default router;

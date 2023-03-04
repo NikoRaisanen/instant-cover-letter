@@ -1,4 +1,5 @@
 import { Configuration, OpenAIApi } from "openai";
+import { GPT_MODEL, SYSTEM_PROMPT } from "../Constants";
 
 const buildOpenAi = async() => {
     const configuration = new Configuration({
@@ -6,8 +7,29 @@ const buildOpenAi = async() => {
     });
     const openai = new OpenAIApi(configuration);
     return openai;
-    // const response = await openai.retrieveModel(GPT_MODEL);
-    // console.log(response.data)
 }
 
-module.exports = { buildOpenAi };
+const generateCoverLetter = async (jobDescription: string, prompt: string) => {
+    const openai = await buildOpenAi();
+    const completion = await openai.createChatCompletion({
+        model: GPT_MODEL,
+        temperature: 0.3,
+        messages: [
+            {
+                role: "system", content: SYSTEM_PROMPT
+            },
+            {
+                role: "user", content: `This is the job description of the job that I want: ${jobDescription}`
+            },
+            {
+                role: "user", content: prompt
+            }
+        ]
+    });
+    return completion
+}
+
+module.exports = {
+    buildOpenAi,
+    generateCoverLetter,
+};
