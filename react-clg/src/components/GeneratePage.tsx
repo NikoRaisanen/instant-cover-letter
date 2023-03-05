@@ -26,7 +26,6 @@ function GeneratePage() {
         })
       });
       const { coverLetter } = await response.json();
-      console.log(coverLetter);
       setCoverLetter(coverLetter);
     
     } catch (err) {

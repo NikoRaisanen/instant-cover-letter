@@ -16,7 +16,7 @@ function App() {
       <Router>
         <Routes>
           <Route path="/" element={ <Navigate replace to="/get-started" />}/>
-          <Route path="/getting-started" element={<SplashPage/>} />
+          <Route path="/get-started" element={<SplashPage/>} />
           <Route path="/generate" element={<GeneratePage/>} />
           <Route path="/result" element={<ResultPage/>} />
         </Routes>

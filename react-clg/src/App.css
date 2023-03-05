@@ -41,6 +41,14 @@ textarea {
   padding-right: 10%;
 }
 
+.splash-small {
+  font-size: calc(5px + 2vmin);
+}
+
+a {
+  color: #61dafb;
+}
+
 @keyframes slideMe{
 0%{
   transform: skewX(53deg) translateX(500px);
