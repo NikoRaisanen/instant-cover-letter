@@ -1,13 +1,13 @@
-import React, { useState } from "react";
 import {
   BrowserRouter as Router,
   Route,
   Routes,
-  Link
+  Navigate,
 } from "react-router-dom";
 import "./App.css";
-import Home from "./components/Home";
-import Result from "./components/Result";
+import GeneratePage from "./components/GeneratePage";
+import ResultPage from "./components/ResultPage";
+import SplashPage from "./components/SplashPage";
 
 function App() {
   return (
@@ -15,8 +15,10 @@ function App() {
       <header className="App-header">
       <Router>
         <Routes>
-          <Route path="/" element={<Home/>} />
-          <Route path="/result" element={<Result/>} />
+          <Route path="/" element={ <Navigate replace to="/get-started" />}/>
+          <Route path="/getting-started" element={<SplashPage/>} />
+          <Route path="/generate" element={<GeneratePage/>} />
+          <Route path="/result" element={<ResultPage/>} />
         </Routes>
       </Router>
       </header>

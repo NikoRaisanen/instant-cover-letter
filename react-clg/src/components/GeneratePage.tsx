@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import "../App.css";
 
-function Home() {
+function GeneratePage() {
   const [jd, setJd] = useState("");
   const [prompt, setPrompt] = useState("");
   const [coverLetter, setCoverLetter] = useState("");
@@ -53,4 +53,4 @@ function Home() {
   );
 }
 
-export default Home;
+export default GeneratePage;
