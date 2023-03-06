@@ -1,11 +1,13 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import "../App.css";
+import "../loading.css";
 
 function GeneratePage() {
   const [jd, setJd] = useState("");
   const [prompt, setPrompt] = useState("");
   const [coverLetter, setCoverLetter] = useState("");
+  const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
 
   // redirect to result page after cover letter is generated
@@ -16,6 +18,10 @@ function GeneratePage() {
   }, [coverLetter])
 
   const doTheMagic = async (): Promise<void> => {
+    if (prompt === "" || jd === "") {
+      return alert("Please enter both a job descripton and a summary of your skills");
+    }
+    setLoading(true);
     try {
       const uri = "https://npqp27hv70.execute-api.us-east-1.amazonaws.com/sorcery";
       const response = await fetch(uri, {
@@ -45,9 +51,12 @@ function GeneratePage() {
     </p>
     <textarea className="prompt" onChange={(e) => {setPrompt(e.target.value)}}/>
     <br/>
-    <button className="button accept-btn" onClick={() => doTheMagic()}>
-    Generate Cover Letter
-    </button>
+    {
+      loading ? <div className="lds-ellipsis"><div></div><div></div><div></div><div></div></div> :
+      <button className="button accept-btn" onClick={() => doTheMagic()}>
+      Generate Cover Letter
+      </button>
+    }
     </div>
   );
 }

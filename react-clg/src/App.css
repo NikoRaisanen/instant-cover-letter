@@ -68,33 +68,33 @@ a {
 }
 
 .button {
-width: 250px;
-height: 60px;
-font-family: 'Roboto', sans-serif;
-font-size: 11px;
-text-transform: uppercase;
-letter-spacing: 2.5px;
-font-weight: 500;
-color: #000;
-background-color: #fff;
-border: none;
-border-radius: 45px;
-box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
-transition: all 0.3s ease 0s;
-cursor: pointer;
-outline: none;
+  width: 250px;
+  height: 60px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 2.5px;
+  font-weight: 550;
+  color: #000;
+  background-color: #fff;
+  border: none;
+  border-radius: 45px;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
+  outline: none;
 }
 
 .button.cancel-btn:hover {
-background-color: #F3270B;
-box-shadow: 0px 15px 20px rgba(243, 42, 11, 0.4);
-color: #fff;
-transform: translateY(-7px);
+  background-color: #F3270B;
+  box-shadow: 0px 15px 20px rgba(243, 42, 11, 0.4);
+  color: #fff;
+  transform: translateY(-7px);
 }
 
 .button.accept-btn:hover {
-background-color: #0B91F3;
-box-shadow: 0px 15px 20px rgba(11, 113, 243, 0.4);
-color: #fff;
-transform: translateY(-7px);
+  background-color: #0B91F3;
+  box-shadow: 0px 15px 20px rgba(11, 113, 243, 0.4);
+  color: #fff;
+  transform: translateY(-7px);
 }
