@@ -2,12 +2,14 @@ import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import "../App.css";
 import "../loading.css";
+import ErrorPage from "./ErrorPage";
 
 function GeneratePage() {
   const [jd, setJd] = useState("");
   const [prompt, setPrompt] = useState("");
   const [coverLetter, setCoverLetter] = useState("");
   const [loading, setLoading] = useState(false);
+  const [error, setError] = useState(false);
   const navigate = useNavigate();
 
   // redirect to result page after cover letter is generated
@@ -36,9 +38,16 @@ function GeneratePage() {
     
     } catch (err) {
       console.error(err);
+      setError(true);
     }
   }
 
+  if (error) {
+    return (
+      <ErrorPage/>
+    );
+  }
+  
   return (
     <div className="Home">
     <p className="titles">

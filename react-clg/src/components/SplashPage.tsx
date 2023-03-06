@@ -6,7 +6,7 @@ const SplashPage = () => {
     return (
         <div className="splash-page">
             <h1>Cover Letter Generator</h1>
-            <p style={{'paddingTop': '50px'}}>Instantly generate a quality cover letter for job applications!</p>
+            <p style={{'paddingTop': '50px'}}>Instantly generate quality cover letters for job applications!</p>
                 
             <p className='splash-small'>
                 This is an open source project, check out the repo <a href="https://github.com/NikoRaisanen/ai-cover-letter-generator" target="_blank"> here</a>
