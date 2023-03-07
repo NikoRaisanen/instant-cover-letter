@@ -53,12 +53,12 @@ function GeneratePage() {
     <p className="titles">
         Paste Job Description
     </p>
-    <textarea className="job-description" onChange={(e) => {setJd(e.target.value)}}/>
+    <textarea placeholder="Copy and paste a job description here" className="job-description" onChange={(e) => {setJd(e.target.value)}}/>
 
     <p className="titles">
         Write a few sentences about your skills, experience, and what you're looking for
     </p>
-    <textarea className="prompt" onChange={(e) => {setPrompt(e.target.value)}}/>
+    <textarea placeholder="If you want to include any specific experience, skills or projects in your cover letter you should write about it here. Providing more detail usually leads to better results" className="prompt" onChange={(e) => {setPrompt(e.target.value)}}/>
     <br/>
     {
       loading ? <div className="lds-ellipsis"><div></div><div></div><div></div><div></div></div> :
