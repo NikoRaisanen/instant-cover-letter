@@ -29,14 +29,10 @@ export const generateCoverLetter = async (jobDescription: string, prompt: string
                 }
             ]
         });
-        return completion;
+        return completion?.data?.choices[0]?.message?.content;
     } catch (err) {
-        // console.log('Error from within openai.ts: ', err)
         const msg = err.response.data.error.message
-    
-        // console.log('error status:', err.response.status);
-        // console.log('error status:', err.response.data.error.message);
         throw new Error(msg)
     }
-    
-}
+};
+
