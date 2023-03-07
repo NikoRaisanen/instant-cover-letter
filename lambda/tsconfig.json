@@ -27,7 +27,8 @@
       "importsNotUsedAsValues": "error",
       "checkJs": true,
       "outDir": "build",
-      "rootDir": "./src"
+      "rootDir": "./src",
+      "useUnknownInCatchVariables": false,
     },
     "include": [
       "src"
