@@ -98,3 +98,10 @@ a {
   color: #fff;
   transform: translateY(-7px);
 }
+
+.job-description-label {
+  font-size: 12px;
+  float: left;
+  margin-top: 10px;
+  padding-left: 10px;
+}
