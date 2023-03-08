@@ -13,20 +13,26 @@ const buildOpenAi = async() => {
 
 export const generateCoverLetter = async (jobDescription: string, prompt: string) => {
     const openai = await buildOpenAi();
-    const completion = await openai.createChatCompletion({
-        model: GPT_MODEL,
-        temperature: 0.3,
-        messages: [
-            {
-                role: "system", content: SYSTEM_PROMPT
-            },
-            {
-                role: "user", content: `This is the job description of the job that I want: ${jobDescription}`
-            },
-            {
-                role: "user", content: prompt
-            }
-        ]
-    });
-    return completion;
-}
+    try {
+        const completion = await openai.createChatCompletion({
+            model: GPT_MODEL,
+            temperature: 0.1,
+            messages: [
+                {
+                    role: "system", content: SYSTEM_PROMPT
+                },
+                {
+                    role: "user", content: `This is the job description of the job that I want: ${jobDescription}`
+                },
+                {
+                    role: "user", content: prompt
+                }
+            ]
+        });
+        return completion?.data?.choices[0]?.message?.content;
+    } catch (err) {
+        const msg = err.response.data.error.message
+        throw new Error(msg)
+    }
+};
+
