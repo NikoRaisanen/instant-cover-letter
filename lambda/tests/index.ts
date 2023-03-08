@@ -8,234 +8,27 @@ const testLambdaHandler = async () => {
         },
       },
       body: JSON.stringify({
-        prompt: "I am a software engineer with 5 years of experience in the field. I have worked on a variety of projects, including a chatbot for a large insurance company. I am looking for a new role where I can continue to grow my skills and contribute to a team. I have a strong understanding of terraform, aws, html, css, javascript, and python",
+        prompt: "I am a software engineer with 3 years of experience in the industry. I am confident in my ability to write javacript, typescript, and python. I also have experience as an application security engineer, where I built internal security tooling. I've been exposed to how CI/CD pipelines work and have even created my own stages in these pipelines. Some random skills I have are: aws, terraform, and unit testing",
         jobDescription: `About the job
-        The telco industry is moving to software-defined services. This transformation is driven by open source software, cloud computing and the move to VNF / CNF approaches. Canonical Ubuntu is a key platform for telco innovation, and we are growing our team of specialists who work in the industry to accelerate the change.
+        At Netflix, we do one thing - entertainment - and we aim to do it really well at scale. We have a strong engineering organization that enables us to achieve these business objectives and a unique culture that guides us. This also means that our security team needs to operate differently than a traditional security team. We do not operate with traditional gating mechanisms but instead focus on enabling our customers. We provide them with clear, opinionated security guidance and usable, scalable, secure by default offerings to make pragmatic risk decisions for Netflix.
+        The Application Security teams at Netflix are responsible for securing the software footprint that we create to run the Netflix product, the Netflix studio, and the business. We have previously invested in the idea of strategic security partnerships and engineering investments to scale our Application Security program. As the Netflix business and engineering workforce has grown, our software footprint has also grown and become more heterogeneous. We are now complementing our security partnerships and engineering investments with increased investments to serve the Appsec Professional Services charter (services like bug bounty, pentesting, product security incident response, threat modeling, security reviews, and developer security education).
+        We are hiring an Application Security Engineer for the newly formed Appsec Reviews and Assessments team. In this role, you will work closely with engineering teams that build software to support the Netflix product, studio and enterprise to provide critical Appsec services. We are looking for folks who are excited about pragmatic risk, continuous operational improvement and customer-centric security experiences.
         
-        Canonical enables operators and communications service providers to embrace this new world, with a focus on platforms such as Ubuntu, OpenStack, and Kubernetes, and reusable, high quality automation for operations at scale.
+        Desired Background
         
-        As part of the Canonical Field Engineering organization, you will lead customers through the design and delivery of OpenStack, Kubernetes, and software-defined networking solutions. Your passion for open-source technologies will enable customers to understand and operate advanced infrastructure substrates to meet the demands of 5G and beyond.
+        You have a strong application security background with a focus on providing practical technical guidance to engineering teams
+        You have experience with threat modeling, security design reviews, security architecture, pentesting and bug bounty handling
+        You have experience working collaboratively with engineers
+        You have strong verbal and written communication skills
         
-        What you'll do
-        Match customer requirements to advanced capabilities in the VNF/CNF/NFVi/NFVO/VNFM/VIM/MEC space
-        Provide technical pre-sales consulting to Service Provider teams
-        Design and implement telco-grade open source multi-tenant private clouds and micro clouds
-        Investigate, report and/or fix software defects uncovered during customer deployments
-        Demonstrate advanced Infrastructure as code (IaC) techniques relevant to telco
-        Architect and implement advanced, resilient Service Provider Cloud and Application solutions
-        Design and deliver software defined infrastructure with OpenStack, Kubernetes, MAAS and Ceph
-        Learn model-driven operations with Juju charms for Kafka, Hadoop, PostgreSQL, MongoDB, NGINX, and more
-        Help customers adopt advanced Bare Metal, Public, Private and Hybrid Cloud solutions
-        Learn from customer engagements and drive meaningful product improvements
-        Shape our roadmap to accelerate our growth in the telco market
+        Finally, here are a few more reasons why we love this work and think that you will too:
         
-        Mandatory skills
-        Python software development experience
-        A thorough understanding of the telco NFVi (VIM), NFVO, VNFM and MEC space
-        Technical understanding of key telco technologies like CPU Pinning, NUMA, SRIOV, DPDK, etc
+        You will work with an industry-leading security team with many learning and growth opportunities.
+        You will have the opportunity to research new ideas and share your ideas across the community.
+        You will work closely with domain experts in diverse areas such as microservices architecture, big data, compute platforms, and content delivery networks.
         
-        Relevant skills
-        A thorough working understanding of the architectures and infrastructure of MNOs and CSPs
-        Working knowledge of Mobile Packet Core, Radio, VAS, OSS/BSS
-        Understanding the infrastructure requirements for modern virtualized NF deployments
-        Thought leadership and the ability to lead architecture discussions about ETSI and/or 3GPP standards
-        Understanding of best practices for open source technology in telco virtualisation roadmaps
-        Architect level understanding and practical experience of telco workload demand
-        Working knowledge of Linux, Openstack and Kubernetes networking
-        A passion to automate and improve all aspects of open source products and tooling
-        Ability to lead complex projects from start to finish
-        A collaborative attitude with a keen eye on customer success
-        Excellent communication and presentation abilities
-        Able to travel up to 50% of the time for events, customer meetings, project delivery
-        BS Computer Science or STEM
-        
-        Ways to stand out from the crowd
-        Widely spoken second language such as Japanese, French, German, Spanish or Portuguese
-        Track record of open source contributions
-        
-        Canonical is a growing international software company that works with the open-source community to deliver Ubuntu, the world's best free software platform.Our services help businesses worldwide reduce costs, improve efficiency and enhance security with Ubuntu.
-        
-        We are proud to foster a workplace free from discrimination. Diversity of experience, perspectives, and background create a better work environment and better products. Whatever your identity we will give your application fair consideration.
-        
-        About the job
-        The telco industry is moving to software-defined services. This transformation is driven by open source software, cloud computing and the move to VNF / CNF approaches. Canonical Ubuntu is a key platform for telco innovation, and we are growing our team of specialists who work in the industry to accelerate the change.
-        
-        Canonical enables operators and communications service providers to embrace this new world, with a focus on platforms such as Ubuntu, OpenStack, and Kubernetes, and reusable, high quality automation for operations at scale.
-        
-        As part of the Canonical Field Engineering organization, you will lead customers through the design and delivery of OpenStack, Kubernetes, and software-defined networking solutions. Your passion for open-source technologies will enable customers to understand and operate advanced infrastructure substrates to meet the demands of 5G and beyond.
-        
-        What you'll do
-        Match customer requirements to advanced capabilities in the VNF/CNF/NFVi/NFVO/VNFM/VIM/MEC space
-        Provide technical pre-sales consulting to Service Provider teams
-        Design and implement telco-grade open source multi-tenant private clouds and micro clouds
-        Investigate, report and/or fix software defects uncovered during customer deployments
-        Demonstrate advanced Infrastructure as code (IaC) techniques relevant to telco
-        Architect and implement advanced, resilient Service Provider Cloud and Application solutions
-        Design and deliver software defined infrastructure with OpenStack, Kubernetes, MAAS and Ceph
-        Learn model-driven operations with Juju charms for Kafka, Hadoop, PostgreSQL, MongoDB, NGINX, and more
-        Help customers adopt advanced Bare Metal, Public, Private and Hybrid Cloud solutions
-        Learn from customer engagements and drive meaningful product improvements
-        Shape our roadmap to accelerate our growth in the telco market
-        
-        Mandatory skills
-        Python software development experience
-        A thorough understanding of the telco NFVi (VIM), NFVO, VNFM and MEC space
-        Technical understanding of key telco technologies like CPU Pinning, NUMA, SRIOV, DPDK, etc
-        
-        Relevant skills
-        A thorough working understanding of the architectures and infrastructure of MNOs and CSPs
-        Working knowledge of Mobile Packet Core, Radio, VAS, OSS/BSS
-        Understanding the infrastructure requirements for modern virtualized NF deployments
-        Thought leadership and the ability to lead architecture discussions about ETSI and/or 3GPP standards
-        Understanding of best practices for open source technology in telco virtualisation roadmaps
-        Architect level understanding and practical experience of telco workload demand
-        Working knowledge of Linux, Openstack and Kubernetes networking
-        A passion to automate and improve all aspects of open source products and tooling
-        Ability to lead complex projects from start to finish
-        A collaborative attitude with a keen eye on customer success
-        Excellent communication and presentation abilities
-        Able to travel up to 50% of the time for events, customer meetings, project delivery
-        BS Computer Science or STEM
-        
-        Ways to stand out from the crowd
-        Widely spoken second language such as Japanese, French, German, Spanish or Portuguese
-        Track record of open source contributions
-        
-        Canonical is a growing international software company that works with the open-source community to deliver Ubuntu, the world's best free software platform.Our services help businesses worldwide reduce costs, improve efficiency and enhance security with Ubuntu.
-        
-        We are proud to foster a workplace free from discrimination. Diversity of experience, perspectives, and background create a better work environment and better products. Whatever your identity we will give your application fair consideration.About the job
-            The telco industry is moving to software-defined services. This transformation is driven by open source software, cloud computing and the move to VNF / CNF approaches. Canonical Ubuntu is a key platform for telco innovation, and we are growing our team of specialists who work in the industry to accelerate the change.
-            
-            Canonical enables operators and communications service providers to embrace this new world, with a focus on platforms such as Ubuntu, OpenStack, and Kubernetes, and reusable, high quality automation for operations at scale.
-            
-            As part of the Canonical Field Engineering organization, you will lead customers through the design and delivery of OpenStack, Kubernetes, and software-defined networking solutions. Your passion for open-source technologies will enable customers to understand and operate advanced infrastructure substrates to meet the demands of 5G and beyond.
-            
-            What you'll do
-            Match customer requirements to advanced capabilities in the VNF/CNF/NFVi/NFVO/VNFM/VIM/MEC space
-            Provide technical pre-sales consulting to Service Provider teams
-            Design and implement telco-grade open source multi-tenant private clouds and micro clouds
-            Investigate, report and/or fix software defects uncovered during customer deployments
-            Demonstrate advanced Infrastructure as code (IaC) techniques relevant to telco
-            Architect and implement advanced, resilient Service Provider Cloud and Application solutions
-            Design and deliver software defined infrastructure with OpenStack, Kubernetes, MAAS and Ceph
-            Learn model-driven operations with Juju charms for Kafka, Hadoop, PostgreSQL, MongoDB, NGINX, and more
-            Help customers adopt advanced Bare Metal, Public, Private and Hybrid Cloud solutions
-            Learn from customer engagements and drive meaningful product improvements
-            Shape our roadmap to accelerate our growth in the telco market
-            
-            Mandatory skills
-            Python software development experience
-            A thorough understanding of the telco NFVi (VIM), NFVO, VNFM and MEC space
-            Technical understanding of key telco technologies like CPU Pinning, NUMA, SRIOV, DPDK, etc
-            
-            Relevant skills
-            A thorough working understanding of the architectures and infrastructure of MNOs and CSPs
-            Working knowledge of Mobile Packet Core, Radio, VAS, OSS/BSS
-            Understanding the infrastructure requirements for modern virtualized NF deployments
-            Thought leadership and the ability to lead architecture discussions about ETSI and/or 3GPP standards
-            Understanding of best practices for open source technology in telco virtualisation roadmaps
-            Architect level understanding and practical experience of telco workload demand
-            Working knowledge of Linux, Openstack and Kubernetes networking
-            A passion to automate and improve all aspects of open source products and tooling
-            Ability to lead complex projects from start to finish
-            A collaborative attitude with a keen eye on customer success
-            Excellent communication and presentation abilities
-            Able to travel up to 50% of the time for events, customer meetings, project delivery
-            BS Computer Science or STEM
-            
-            Ways to stand out from the crowd
-            Widely spoken second language such as Japanese, French, German, Spanish or Portuguese
-            Track record of open source contributions
-            
-            Canonical is a growing international software company that works with the open-source community to deliver Ubuntu, the world's best free software platform.Our services help businesses worldwide reduce costs, improve efficiency and enhance security with Ubuntu.
-            
-            We are proud to foster a workplace free from discrimination. Diversity of experience, perspectives, and background create a better work environment and better products. Whatever your identity we will give your application fair consideration.
-            About the job
-            The telco industry is moving to software-defined services. This transformation is driven by open source software, cloud computing and the move to VNF / CNF approaches. Canonical Ubuntu is a key platform for telco innovation, and we are growing our team of specialists who work in the industry to accelerate the change.
-            
-            Canonical enables operators and communications service providers to embrace this new world, with a focus on platforms such as Ubuntu, OpenStack, and Kubernetes, and reusable, high quality automation for operations at scale.
-            
-            As part of the Canonical Field Engineering organization, you will lead customers through the design and delivery of OpenStack, Kubernetes, and software-defined networking solutions. Your passion for open-source technologies will enable customers to understand and operate advanced infrastructure substrates to meet the demands of 5G and beyond.
-            
-            What you'll do
-            Match customer requirements to advanced capabilities in the VNF/CNF/NFVi/NFVO/VNFM/VIM/MEC space
-            Provide technical pre-sales consulting to Service Provider teams
-            Design and implement telco-grade open source multi-tenant private clouds and micro clouds
-            Investigate, report and/or fix software defects uncovered during customer deployments
-            Demonstrate advanced Infrastructure as code (IaC) techniques relevant to telco
-            Architect and implement advanced, resilient Service Provider Cloud and Application solutions
-            Design and deliver software defined infrastructure with OpenStack, Kubernetes, MAAS and Ceph
-            Learn model-driven operations with Juju charms for Kafka, Hadoop, PostgreSQL, MongoDB, NGINX, and more
-            Help customers adopt advanced Bare Metal, Public, Private and Hybrid Cloud solutions
-            Learn from customer engagements and drive meaningful product improvements
-            Shape our roadmap to accelerate our growth in the telco market
-            
-            Mandatory skills
-            Python software development experience
-            A thorough understanding of the telco NFVi (VIM), NFVO, VNFM and MEC space
-            Technical understanding of key telco technologies like CPU Pinning, NUMA, SRIOV, DPDK, etc
-            
-            Relevant skills
-            A thorough working understanding of the architectures and infrastructure of MNOs and CSPs
-            Working knowledge of Mobile Packet Core, Radio, VAS, OSS/BSS
-            Understanding the infrastructure requirements for modern virtualized NF deployments
-            Thought leadership and the ability to lead architecture discussions about ETSI and/or 3GPP standards
-            Understanding of best practices for open source technology in telco virtualisation roadmaps
-            Architect level understanding and practical experience of telco workload demand
-            Working knowledge of Linux, Openstack and Kubernetes networking
-            A passion to automate and improve all aspects of open source products and tooling
-            Ability to lead complex projects from start to finish
-            A collaborative attitude with a keen eye on customer success
-            Excellent communication and presentation abilities
-            Able to travel up to 50% of the time for events, customer meetings, project delivery
-            BS Computer Science or STEM
-            About the job
-        The telco industry is moving to software-defined services. This transformation is driven by open source software, cloud computing and the move to VNF / CNF approaches. Canonical Ubuntu is a key platform for telco innovation, and we are growing our team of specialists who work in the industry to accelerate the change.
-        
-        Canonical enables operators and communications service providers to embrace this new world, with a focus on platforms such as Ubuntu, OpenStack, and Kubernetes, and reusable, high quality automation for operations at scale.
-        
-        As part of the Canonical Field Engineering organization, you will lead customers through the design and delivery of OpenStack, Kubernetes, and software-defined networking solutions. Your passion for open-source technologies will enable customers to understand and operate advanced infrastructure substrates to meet the demands of 5G and beyond.
-        
-        What you'll do
-        Match customer requirements to advanced capabilities in the VNF/CNF/NFVi/NFVO/VNFM/VIM/MEC space
-        Provide technical pre-sales consulting to Service Provider teams
-        Design and implement telco-grade open source multi-tenant private clouds and micro clouds
-        Investigate, report and/or fix software defects uncovered during customer deployments
-        Demonstrate advanced Infrastructure as code (IaC) techniques relevant to telco
-        Architect and implement advanced, resilient Service Provider Cloud and Application solutions
-        Design and deliver software defined infrastructure with OpenStack, Kubernetes, MAAS and Ceph
-        Learn model-driven operations with Juju charms for Kafka, Hadoop, PostgreSQL, MongoDB, NGINX, and more
-        Help customers adopt advanced Bare Metal, Public, Private and Hybrid Cloud solutions
-        Learn from customer engagements and drive meaningful product improvements
-        Shape our roadmap to accelerate our growth in the telco market
-        
-        Mandatory skills
-        Python software development experience
-        A thorough understanding of the telco NFVi (VIM), NFVO, VNFM and MEC space
-        Technical understanding of key telco technologies like CPU Pinning, NUMA, SRIOV, DPDK, etc
-        
-        Relevant skills
-        A thorough working understanding of the architectures and infrastructure of MNOs and CSPs
-        Working knowledge of Mobile Packet Core, Radio, VAS, OSS/BSS
-        Understanding the infrastructure requirements for modern virtualized NF deployments
-        Thought leadership and the ability to lead architecture discussions about ETSI and/or 3GPP standards
-        Understanding of best practices for open source technology in telco virtualisation roadmaps
-        Architect level understanding and practical experience of telco workload demand
-        Working knowledge of Linux, Openstack and Kubernetes networking
-        A passion to automate and improve all aspects of open source products and tooling
-        Ability to lead complex projects from start to finish
-        A collaborative attitude with a keen eye on customer success
-        Excellent communication and presentation abilities
-        Able to travel up to 50% of the time for events, customer meetings, project delivery
-        BS Computer Science or STEM
-        
-        Ways to stand out from the crowd
-        Widely spoken second language such as Japanese, French, German, Spanish or Portuguese
-        Track record of open source contributions
-        
-        Canonical is a growing international software company that works with the open-source community to deliver Ubuntu, the world's best free software platform.Our services help businesses worldwide reduce costs, improve efficiency and enhance security with Ubuntu.
-        
-        We are proud to foster a workplace free from discrimination. Diversity of experience, perspectives, and background create a better work environment and better products. Whatever your identity we will give your application fair consideration.`
+        Netflix allows the security team to approach security differently. We’ve shaped our security principles to align with our culture of “Freedom and Responsibility” and “Context not Control.” Employees have tremendous freedom in their work, along with the corresponding responsibility and the accountability to do the right thing for Netflix. Read more about the Netflix culture here.
+        We are an equal opportunity employer and celebrate diversity, recognizing that diversity of thought and background builds stronger teams. We approach diversity and inclusion seriously and thoughtfully. We do not discriminate based on race, religion, color, national origin, gender, sexual orientation, age, marital status, veteran status, or disability status.`
       }),
     };
     const res = await handler(event, null);
@@ -245,6 +38,7 @@ const testLambdaHandler = async () => {
 
 testLambdaHandler().then((res) => {
     console.log(res)
+    console.log(JSON.parse(res.body).coverLetter)
 }).catch(() => {
     console.log('catch... this should not happen');
 });

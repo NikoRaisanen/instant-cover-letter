@@ -16,7 +16,7 @@ export const generateCoverLetter = async (jobDescription: string, prompt: string
     try {
         const completion = await openai.createChatCompletion({
             model: GPT_MODEL,
-            temperature: 0.3,
+            temperature: 0.1,
             messages: [
                 {
                     role: "system", content: SYSTEM_PROMPT
