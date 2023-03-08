@@ -9,11 +9,13 @@ function GeneratePage() {
   const [prompt, setPrompt] = useState("");
   const [coverLetter, setCoverLetter] = useState("");
   const [loading, setLoading] = useState(false);
-  const [error, setError] = useState(false);
+  const [error, setError] = useState("");
   const [jdLength, setJdLength] = useState(0);
+  const [promptLength, setPromptLength] = useState(0);
   const [isButtonDisabled, setIsButtonDisabled] = useState(false);
   const navigate = useNavigate();
-  const maxJdLength = 8000;
+  const maxJdLength = 6000;
+  const maxPromptLength = 1000;
 
   // redirect to result page after cover letter is generated
   useEffect(() => {
@@ -23,9 +25,6 @@ function GeneratePage() {
   }, [coverLetter])
 
   const doTheMagic = async (): Promise<void> => {
-    // if (prompt === "" || jd === "") {
-    //   return alert("Please enter both a job descripton and a summary of your skills");
-    // }
     setLoading(true);
     try {
       const uri = "https://npqp27hv70.execute-api.us-east-1.amazonaws.com/sorcery";
@@ -36,29 +35,47 @@ function GeneratePage() {
           jobDescription: jd,
         })
       });
-      const { coverLetter } = await response.json();
-      setCoverLetter(coverLetter);
-    
-    } catch (err) {
+      const res = await response.json();
+      if (res.error) {
+        return setError(res.error);
+      }
+
+      setCoverLetter(res.coverLetter);
+    } catch (err: any) {
       console.error(err);
-      setError(true);
+      setError(err.message);
     }
   }
 
   const handleJdChange = (e: React.ChangeEvent<HTMLTextAreaElement>): void => {
     setJd(e.target.value);
     setJdLength(e.target.value.length);
-    if (e.target.value.length > maxJdLength) {
-      alert("Your job description is too long. Please shorten it to 8000 characters or less");
-      return setIsButtonDisabled(true);
+    if (!isButtonDisabled && e.target.value.length > maxJdLength) {
+      alert(`Your job description is too long. Please shorten it to ${maxJdLength} characters or less`);
+      setIsButtonDisabled(true);
     }
-    setIsButtonDisabled(false);
+    // re enable button if length is appropriate
+    else if (isButtonDisabled && e.target.value.length <= maxJdLength) {
+      setIsButtonDisabled(false);
+    } 
+  }
 
+  const handlePromptChange = (e: React.ChangeEvent<HTMLTextAreaElement>): void => {
+    setPrompt(e.target.value);
+    setPromptLength(e.target.value.length);
+    if (!isButtonDisabled && e.target.value.length > maxPromptLength) {
+      alert(`Your summary is too long. Please shorten it to ${maxPromptLength} characters or less`);
+      setIsButtonDisabled(true);
+    }
+    // re enable button if length is appropriate
+    else if (isButtonDisabled && e.target.value.length <= maxPromptLength) {
+      setIsButtonDisabled(false);
+    }
   }
 
   if (error) {
     return (
-      <ErrorPage/>
+      <ErrorPage msg={error}/>
     );
   }
   
@@ -68,14 +85,18 @@ function GeneratePage() {
         Paste Job Description
     </p>
     <label className="job-description-label">Characters remaining: {(maxJdLength - jdLength) < 0 ? 0 : (maxJdLength - jdLength)}</label>
-    <br></br>
+    <br/>
     <textarea placeholder="Copy and paste a job description here" className="job-description" onChange={(e) => {handleJdChange(e)}}/>
 
     <p className="titles">
         Write a few sentences about your skills, experience, and what you're looking for
     </p>
-    <textarea placeholder="If you want to include any specific experience, skills or projects in your cover letter you should write about it here. Providing more detail usually leads to better results" className="prompt" onChange={(e) => {setPrompt(e.target.value)}}/>
     <br/>
+    <label className="prompt-label">Characters remaining: {(maxPromptLength - promptLength) < 0 ? 0 : (maxPromptLength - promptLength)}</label>
+    <br/>
+    <textarea placeholder="If you want to include any specific experience, skills or projects in your cover letter you should write about it here. Providing more detail usually leads to better results" className="prompt" onChange={(e) => {handlePromptChange(e)}}/>
+    <br/>
+
     {
       loading ? <div className="lds-ellipsis"><div></div><div></div><div></div><div></div></div> :
       <button disabled={isButtonDisabled} className={isButtonDisabled ? "button cancel-btn": "button accept-btn"} onClick={() => doTheMagic()}>
