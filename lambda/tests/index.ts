@@ -8,8 +8,8 @@ const testLambdaHandler = async () => {
         },
       },
       body: JSON.stringify({
-        // resumeUrl: "https://instantcoverletter-resumes.s3.amazonaws.com/NikoSVB-June2022.pdf",
-        prompt: "I have a long background in sales and customer service. I have worked in a variety of industries including retail, food service, and hospitality",
+        resumeUrl: "https://instantcoverletter-resumes.s3.amazonaws.com/NikoSVB-June2022.pdf",
+        // prompt: "I have a long background in sales and customer service. I have worked in a variety of industries including retail, food service, and hospitality",
         jobDescription: `About the job
         At Netflix, we do one thing - entertainment - and we aim to do it really well at scale. We have a strong engineering organization that enables us to achieve these business objectives and a unique culture that guides us. This also means that our security team needs to operate differently than a traditional security team. We do not operate with traditional gating mechanisms but instead focus on enabling our customers. We provide them with clear, opinionated security guidance and usable, scalable, secure by default offerings to make pragmatic risk decisions for Netflix.
         The Application Security teams at Netflix are responsible for securing the software footprint that we create to run the Netflix product, the Netflix studio, and the business. We have previously invested in the idea of strategic security partnerships and engineering investments to scale our Application Security program. As the Netflix business and engineering workforce has grown, our software footprint has also grown and become more heterogeneous. We are now complementing our security partnerships and engineering investments with increased investments to serve the Appsec Professional Services charter (services like bug bounty, pentesting, product security incident response, threat modeling, security reviews, and developer security education).

@@ -6,7 +6,7 @@
   "scripts": {
     "test": "jest",
     "start": "node build/index.js",
-    "postbuild": "cp package.json build/package.json && cd build && npm install --only=production",
+    "postbuild": "cp package.json build/package.json && cd build && npm install --target_arch=x64 --target_platform=linux --only=production",
     "dev": "tsc -w & nodemon build/index.js"
   },
   "repository": {
