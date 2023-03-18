@@ -4,6 +4,7 @@ import { getContent } from "./services/pdf";
 // TODO: look into this https://haydnjmorris.medium.com/aws-lambda-node-modules-no-docker-required-76443a0f6c4e
 // I am having an issue with doing npm install locally on windows, then trying to use those node_modules in a lambda
 exports.handler = async (event: { body: string; }, _: any) => {
+    console.log('I AM IN THE INDEX FILE!!!')
     let response;
     try {
         const body = JSON.parse(event.body);
