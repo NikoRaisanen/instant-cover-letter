@@ -23,6 +23,7 @@
     "dotenv": "^16.0.3",
     "express": "^4.18.2",
     "openai": "^3.2.1",
+    "pdf2json": "2.0.1",
     "pdfjs-dist": "^3.4.120"
   },
   "devDependencies": {
