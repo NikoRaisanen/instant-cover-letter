@@ -6,15 +6,12 @@ const getTextContent = (pdfData: any) => {
     let rawText = '';
     const pages = pdfData.Pages;
     console.log('number of pages: ', pages.length);
-    // for each page
     for (let pageNum = 0; pageNum < pages.length; pageNum++) {
-        console.log(pageNum);
-        // for each text field
-        // console.log('length of Texts: ', pdfData.Pages[pageNum].Texts);
         const numTexts = pdfData.Pages[pageNum].Texts.length;
-        console.log('length of texts ', numTexts);
+        // TODO: error if numTexts > some max value
+        console.log(`length of text on page ${pageNum}: ${numTexts}`);
         for (let textNum = 0; textNum < numTexts; textNum++) {
-            // pdfData.Pages[pageNum].Texts[textNum] is of type array, might need another loop... Hardcoding index 0 for now
+            // TODO: pdfData.Pages[pageNum].Texts[textNum] is of type array, might need another loop... Hardcoding index 0 for now
             const token = pdfData.Pages[pageNum].Texts[textNum].R[0].T
             // TODO: can we remove any other useless tokens?
             if (token == "_") { continue };
@@ -22,10 +19,11 @@ const getTextContent = (pdfData: any) => {
         }
     }
 
-    // TODO: spaces are not handled well
+    // TODO: spaces are not handled well... maybe chatGPT could fix it?
     return decodeURIComponent(rawText);
 }
 
+// TODO(1): get file from s3 instead of hardcode
 export const parsePdf = () => {
     return new Promise((resolve, reject) => {
         const resolvedPath = path.resolve(__dirname, 'testResume.pdf')
