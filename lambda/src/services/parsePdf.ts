@@ -14,11 +14,10 @@ const getTextContent = (pdfData: any) => {
         const numTexts = pdfData.Pages[pageNum].Texts.length;
         console.log('length of texts ', numTexts);
         for (let textNum = 0; textNum < numTexts; textNum++) {
-            // pdfData.Pages[pageNum].Texts[textNum] is of type array, might need another loop... Hardcoding index 0 fot now
+            // pdfData.Pages[pageNum].Texts[textNum] is of type array, might need another loop... Hardcoding index 0 for now
             const token = pdfData.Pages[pageNum].Texts[textNum].R[0].T
             // TODO: can we remove any other useless tokens?
             if (token == "_") { continue };
-            console.log(token)
             rawText = rawText.concat(token);
         }
     }
@@ -38,7 +37,6 @@ export const parsePdf = () => {
         });
         pdfParser.on("pdfParser_dataReady", (pdfData: any) => {
             const finalText = getTextContent(pdfData);
-            console.log('Final extracted text: ', finalText);
             resolve(finalText);
         });
         pdfParser.loadPDF(resolvedPath);

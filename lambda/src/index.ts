@@ -8,9 +8,9 @@ exports.handler = async (event: { body: string; }, _: any) => {
     let response;
     try {
         console.log('event', event);
-        // const body = JSON.parse(event.body);
+        const body = JSON.parse(event.body);
         // const { jobDescription } = body;
-        // console.log('body', body);
+        console.log('body', body);
         // const prompt = body.prompt;
         // console.info("prompt:", prompt)
         // test pdf parsing in lambda
