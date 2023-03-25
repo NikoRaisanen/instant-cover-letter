@@ -1,6 +1,22 @@
-// import fs from "fs";
+import consumers from 'node:stream/consumers'
+import { S3Client, GetObjectCommand } from "@aws-sdk/client-s3";
 import path from "path"
+import { readFileSync, writeFileSync } from 'fs';
+import Constants from '../Constants';
+import type { Readable } from 'stream';
+const { RESUME_BUCKET } = Constants;
 const PDFParser = require("pdf2json");
+
+// // Apparently the stream parameter should be of type Readable|ReadableStream|Blob
+// // The latter 2 don't seem to exist anywhere.
+// async function streamToString (stream: Readable): Promise<string> {
+//     return await new Promise((resolve, reject) => {
+//       const chunks: Uint8Array[] = [];
+//       stream.on('data', (chunk) => chunks.push(chunk));
+//       stream.on('error', reject);
+//       stream.on('end', () => resolve(Buffer.concat(chunks).toString('utf-8')));
+//     });
+//   }
 
 const getTextContent = (pdfData: any) => {
     let rawText = '';
@@ -24,7 +40,27 @@ const getTextContent = (pdfData: any) => {
 }
 
 // TODO(1): get file from s3 instead of hardcode
-export const parsePdf = () => {
+export const parsePdf = async (s3Key: string) => {
+    const client = new S3Client({
+        region: 'us-east-1',
+    })
+    const cmd = new GetObjectCommand({
+        Bucket: RESUME_BUCKET,
+        Key: s3Key,
+    });
+    const { Body } = await client.send(cmd);
+    // await streamToString(Body as Readable);
+    // pdf.Body?.pipe(createWriteStream('/tmp/'))
+    const buffer = await consumers.buffer(Body as Readable);
+    console.log('before writing to tmp')
+    writeFileSync('/tmp/filename', buffer);
+    console.log('after writing to tmp');
+    
+    // read file to verify it was written
+    const myFile = readFileSync('/tmp/filename');
+    console.log('printing myFile: ', myFile);
+
+    // TODO: parse the s3 file instead of hardcoded file
     return new Promise((resolve, reject) => {
         const resolvedPath = path.resolve(__dirname, 'testResume.pdf')
         console.log('resolvedPath: ', resolvedPath);

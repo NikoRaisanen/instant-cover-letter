@@ -8,9 +8,9 @@ exports.handler = async (event: { body: string; }, _: any) => {
         const body = JSON.parse(event.body);
         const { jobDescription } = body;
         console.log('body', body);
-        
+
         // if no prompt provided, parse pdf
-        const prompt = body.prompt || await parsePdf();
+        const prompt = body.prompt || await parsePdf('NikoSVB-June2022.pdf');
         console.info("prompt:", prompt)
         const coverLetter = await generateCoverLetter(jobDescription, prompt);
         if (!coverLetter) {
