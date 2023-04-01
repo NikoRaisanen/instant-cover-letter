@@ -41,31 +41,33 @@ const getTextContent = (pdfData: any) => {
 
 // TODO(1): get file from s3 instead of hardcode
 export const parsePdf = async (s3Key: string) => {
-    const client = new S3Client({
-        region: 'us-east-1',
-    })
-    const cmd = new GetObjectCommand({
-        Bucket: RESUME_BUCKET,
-        Key: s3Key,
-    });
-    const { Body } = await client.send(cmd);
-    // await streamToString(Body as Readable);
-    // pdf.Body?.pipe(createWriteStream('/tmp/'))
-    const buffer = await consumers.buffer(Body as Readable);
-    console.log('before writing to tmp')
-    writeFileSync('/tmp/filename', buffer);
-    console.log('after writing to tmp');
-    
-    // read file to verify it was written
-    const myFile = readFileSync('/tmp/filename');
-    console.log('printing myFile: ', myFile);
-
     // TODO: parse the s3 file instead of hardcoded file
-    return new Promise((resolve, reject) => {
-        const resolvedPath = path.resolve(__dirname, 'testResume.pdf')
+    return new Promise(async (resolve, reject) => {
+        console.log('before s3 call');
+        const client = new S3Client({
+            region: 'us-east-1',
+        })
+        const cmd = new GetObjectCommand({
+            Bucket: RESUME_BUCKET,
+            Key: s3Key,
+        });
+        const { Body } = await client.send(cmd);
+        console.log('after s3 call');
+        // await streamToString(Body as Readable);
+        // pdf.Body?.pipe(createWriteStream('/tmp/')
+        const buffer = await consumers.buffer(Body as Readable);
+        console.log('buffer: ', buffer);
+        console.log('before writing to tmp')
+        writeFileSync('/tmp/filename.pdf', buffer, 'binary');
+        console.log('after writing to tmp');
+        
+        // read file to verify it was written
+        const myFile = readFileSync('/tmp/filename.pdf', 'binary');
+        console.log('printing myFile: ', myFile);
+        const resolvedPath = path.resolve('/tmp/', 'filename.pdf')
         console.log('resolvedPath: ', resolvedPath);
         const pdfParser = new PDFParser();
-        pdfParser.on("pdfParser_dataError", (errData: any) => {
+        pdfParser.on("pdfParser_dataError", (errData: any) => {1
             console.error(errData);
             reject(errData);
         });

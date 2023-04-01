@@ -9,15 +9,15 @@ const PdfUpload = (props: any) => {
     };
 
     const onFileUpload = async () => {
-        const formData = new FormData();
+        // const formData = new FormData();
 
-        formData.append(
-          "resume",
-          selectedFile,
-          selectedFile.name
-        );
+        // formData.append(
+        //   "resume",
+        //   selectedFile,
+        //   selectedFile.name
+        // );
        
-        await axios.put(`https://instantcoverletter-resumes.s3.amazonaws.com/${selectedFile.name}`, formData);
+        await axios.put(`https://instantcoverletter-resumes.s3.amazonaws.com/${selectedFile.name}`, selectedFile);
       };
 
     return (
