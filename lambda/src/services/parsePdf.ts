@@ -24,7 +24,7 @@ const getTextContent = (pdfData: any) => {
     return decodeURIComponent(rawText);
 }
 
-export const parsePdf = async (s3Key: string) => {
+export const parsePdf = async (s3Key: string): Promise<string> => {
     return new Promise(async (resolve, reject) => {
         const client = new S3Client({
             region: 'us-east-1',
