@@ -1,7 +1,5 @@
 import { useState } from 'react';
 import axios from 'axios';
-import { getSignedUrl } from "@aws-sdk/s3-request-presigner";
-import { S3Client, PutObjectCommand} from "@aws-sdk/client-s3";
 
 const PdfUpload = (props: any) => {
     const [selectedFile, setSelectedFile] = useState<any>(null);
@@ -11,10 +9,12 @@ const PdfUpload = (props: any) => {
     };
 
     const getPresignedUrl = async (): Promise<string> => {
-      const uri = "https://npqp27hv70.execute-api.us-east-1.amazonaws.com/presigned-url";
+      // TODO: change uri back to one beginning with npqp27hv70
+      // search for both urls to ensure all are pointing to correct api
+      const uri = "https://fg94zuh9s0.execute-api.us-east-1.amazonaws.com/presigned-url";
       const response = await axios.get(uri, {
         params: {
-          fileName: selectedFile.name,
+          filename: selectedFile.name,
         },
       });
       console.log('response: ', response);
