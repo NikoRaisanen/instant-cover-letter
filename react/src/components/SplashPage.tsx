@@ -14,7 +14,7 @@ const SplashPage = () => {
             <br/>
             
            
-            <button className="button accept-btn" onClick={() => navigate("/generate")}>
+            <button className="button accept-btn" onClick={() => navigate("/your-skills")}>
                 Get started
             </button>
         </div>

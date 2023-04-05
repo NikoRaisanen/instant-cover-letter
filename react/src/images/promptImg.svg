@@ -1,0 +1,604 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="512"
+   height="512"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.92.1 r15371"
+   sodipodi:docname="tux.svg"
+   inkscape:export-filename="/home/simon/Insync/Magic Oxygen/Authors/Simon West/poems.png"
+   inkscape:export-xdpi="299.96371"
+   inkscape:export-ydpi="299.96371">
+  <defs
+     id="defs4">
+    <linearGradient
+       inkscape:collect="always"
+       id="linearGradient3886">
+      <stop
+         style="stop-color:#ff9a00;stop-opacity:1;"
+         offset="0"
+         id="stop3888" />
+      <stop
+         style="stop-color:#ff9a00;stop-opacity:0;"
+         offset="1"
+         id="stop3890" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       id="linearGradient3048">
+      <stop
+         style="stop-color:#ffffff;stop-opacity:1;"
+         offset="0"
+         id="stop3050" />
+      <stop
+         style="stop-color:#ffffff;stop-opacity:0;"
+         offset="1"
+         id="stop3052" />
+    </linearGradient>
+    <linearGradient
+       id="linearGradient3029">
+      <stop
+         style="stop-color:#ffffff;stop-opacity:1;"
+         offset="0"
+         id="stop3031" />
+      <stop
+         style="stop-color:#ffffff;stop-opacity:0;"
+         offset="1"
+         id="stop3033" />
+    </linearGradient>
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient3029"
+       id="radialGradient3035"
+       cx="594.2854"
+       cy="838.55597"
+       fx="594.2854"
+       fy="838.55597"
+       r="131.3651"
+       gradientTransform="matrix(-0.11736788,0.14582216,-0.48130041,-0.38738373,848.61903,902.64661)"
+       gradientUnits="userSpaceOnUse" />
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient3029"
+       id="radialGradient3039"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(0.10743885,0.15328475,-0.50052461,0.3508233,802.35713,393.48765)"
+       cx="264.53784"
+       cy="687.04956"
+       fx="264.53784"
+       fy="687.04956"
+       r="131.3651" />
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient3048"
+       id="radialGradient3054"
+       cx="285.97333"
+       cy="373.34735"
+       fx="285.97333"
+       fy="373.34735"
+       r="68.690376"
+       gradientTransform="matrix(-0.06114018,0.7130025,-0.70330134,-0.06030837,566.03348,207.46958)"
+       gradientUnits="userSpaceOnUse" />
+    <filter
+       id="filter3104"
+       inkscape:label="Drop Shadow"
+       style="color-interpolation-filters:sRGB">
+      <feFlood
+         id="feFlood3106"
+         flood-opacity="0.686"
+         flood-color="rgb(0,0,0)"
+         result="flood" />
+      <feComposite
+         id="feComposite3108"
+         in2="SourceGraphic"
+         in="flood"
+         operator="in"
+         result="composite1" />
+      <feGaussianBlur
+         id="feGaussianBlur3110"
+         stdDeviation="6"
+         result="blur" />
+      <feOffset
+         id="feOffset3112"
+         dx="-50"
+         dy="50"
+         result="offset" />
+      <feComposite
+         id="feComposite3114"
+         in2="offset"
+         in="SourceGraphic"
+         operator="over"
+         result="composite2" />
+    </filter>
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient3886"
+       id="radialGradient3892"
+       cx="495.98489"
+       cy="917.6922"
+       fx="495.98489"
+       fy="917.6922"
+       r="34.011665"
+       gradientTransform="matrix(0.4953139,3.5829578,-0.68559964,0.09477881,879.48609,-975.35313)"
+       gradientUnits="userSpaceOnUse" />
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient3029"
+       id="radialGradient4027"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(-0.12519241,0.15554364,-0.5133871,-0.41320931,905.19363,962.82305)"
+       cx="594.2854"
+       cy="838.55597"
+       fx="594.2854"
+       fy="838.55597"
+       r="131.3651" />
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient3029"
+       id="radialGradient4029"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(0.11460144,0.16350373,-0.53389292,0.37421152,855.84761,419.72016)"
+       cx="264.53784"
+       cy="687.04956"
+       fx="264.53784"
+       fy="687.04956"
+       r="131.3651" />
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient3048"
+       id="radialGradient4031"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(-0.06521619,0.760536,-0.7501881,-0.06432893,673.00326,189.34517)"
+       cx="285.97333"
+       cy="373.34735"
+       fx="285.97333"
+       fy="373.34735"
+       r="68.690376" />
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient3886"
+       id="radialGradient4033"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(0.52833483,3.8218217,-0.73130628,0.1010974,938.1185,-1040.3767)"
+       cx="495.98489"
+       cy="917.6922"
+       fx="495.98489"
+       fy="917.6922"
+       r="34.011665" />
+    <filter
+       id="filter3118"
+       inkscape:label="Matte bevel"
+       inkscape:menu="Bevels"
+       inkscape:menu-tooltip="Soft, pastel-colored, blurry bevel"
+       x="-0.25"
+       y="-0.25"
+       width="1.5"
+       height="1.5"
+       style="color-interpolation-filters:sRGB">
+      <feGaussianBlur
+         id="feGaussianBlur3120"
+         stdDeviation="1"
+         result="result6" />
+      <feComposite
+         id="feComposite3122"
+         in2="result6"
+         operator="in"
+         in="result6"
+         result="result7" />
+      <feGaussianBlur
+         id="feGaussianBlur3124"
+         stdDeviation="8"
+         result="result3"
+         in="result7" />
+      <feComposite
+         id="feComposite3126"
+         in2="result7"
+         operator="over"
+         result="result91" />
+      <feComposite
+         id="feComposite3128"
+         in2="result91"
+         operator="in"
+         in="result3"
+         result="result5" />
+      <feColorMatrix
+         id="feColorMatrix3130"
+         values="0 0 0 -1 0 0 0 0 -1 0 0 0 0 -1 0 0 0 0 1 0 "
+         result="result4" />
+      <feSpecularLighting
+         id="feSpecularLighting3132"
+         surfaceScale="3"
+         specularConstant="2"
+         specularExponent="45"
+         in="result4"
+         result="result11">
+        <fePointLight
+           id="fePointLight3134"
+           x="-5000"
+           y="-10000"
+           z="20000" />
+      </feSpecularLighting>
+      <feComposite
+         id="feComposite3136"
+         in2="result4"
+         operator="arithmetic"
+         k1="1"
+         result="result10"
+         k2="0"
+         k3="0"
+         k4="0" />
+      <feComposite
+         id="feComposite3138"
+         in2="result10"
+         operator="arithmetic"
+         k2="0.5"
+         k3="1"
+         in="result5"
+         result="result8"
+         k1="0"
+         k4="0" />
+      <feComposite
+         id="feComposite3140"
+         in2="result8"
+         result="result9" />
+      <feBlend
+         id="feBlend3142"
+         in2="result9"
+         mode="normal" />
+    </filter>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath16">
+      <path
+         inkscape:connector-curvature="0"
+         d="M 0,283.46 H 283.46 V 0 H 0 Z"
+         id="path18" />
+    </clipPath>
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.24748737"
+     inkscape:cx="-1274.2573"
+     inkscape:cy="660.47043"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer2"
+     showgrid="false"
+     inkscape:window-width="1855"
+     inkscape:window-height="1056"
+     inkscape:window-x="1985"
+     inkscape:window-y="24"
+     inkscape:window-maximized="1"
+     width="524.41px" />
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:groupmode="layer"
+     id="layer2"
+     inkscape:label="Layer"
+     style="display:inline"
+     transform="translate(0,-610.51968)">
+    <rect
+       style="fill:none;stroke:none;stroke-width:1.40182376"
+       id="rect3985"
+       width="512"
+       height="512"
+       x="0"
+       y="610.51965"
+       inkscape:export-filename="/home/simon/Dropbox/Clients/Simon West/tux_write_640.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <g
+       id="g3987"
+       transform="matrix(0.73846155,0,0,0.73846155,-75.887932,319.27304)"
+       inkscape:export-filename="/home/simon/Dropbox/Clients/Simon West/tux_write_640.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90">
+      <g
+         inkscape:export-ydpi="89.617577"
+         inkscape:export-xdpi="89.617577"
+         inkscape:export-filename="/home/simon/Dropbox/Clients/Simon West/tux_writer.png"
+         transform="translate(1231.2381,6.0952381)"
+         id="g3917">
+        <path
+           style="fill:#b3b3b3;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.9624446"
+           d="m -562.80224,638.21042 c 22.26571,4.69811 37.0991,13.85563 44.12693,27.69647 37.77256,6.79734 50.69987,17.03277 63.3256,35.90059 l -176.52673,66.12305 -3.03548,16.04122 c -10.70885,-17.14496 -27.3442,-30.33891 -56.28633,-35.32837 -4.10931,-19.03994 -25.94681,-28.86122 -55.35667,-34.74487 l 0.15259,-11.78436 z"
+           id="rect3894"
+           inkscape:connector-curvature="0"
+           sodipodi:nodetypes="ccccccccc" />
+        <path
+           style="fill:none;stroke:#000000;stroke-width:1.86909831px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+           d="m -634.69555,782.91756 c 0.8679,-1.20369 -16.88892,-27.3371 -56.12624,-34.2695 -5.64961,-26.11727 -54.82883,-36.35116 -55.42409,-34.98195 -0.14512,-4.9783 -0.3493,-12.1342 0.65951,-11.1129 24.42171,5.08504 51.49668,13.91772 62.15779,33.68074 28.32232,3.47897 42.29574,16.0204 51.42858,31.61904 l -2.66667,14.85714 178.28572,-68.19047 0.7619,-12.57143"
+           id="path3899"
+           inkscape:connector-curvature="0"
+           sodipodi:nodetypes="ccccccccc" />
+        <path
+           style="fill:none;stroke:#000000;stroke-width:1.86909831px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+           d="m -690.47653,748.73871 6.98885,-12.53153 165.29721,-69.878"
+           id="path3901"
+           inkscape:connector-curvature="0"
+           sodipodi:nodetypes="ccc" />
+        <path
+           inkscape:connector-curvature="0"
+           id="path3903"
+           d="m -631.95379,768.18773 176.52521,-66.62046"
+           style="fill:none;stroke:#000000;stroke-width:1.86909831px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+           sodipodi:nodetypes="cc" />
+        <path
+           style="fill:none;stroke:#000000;stroke-width:1.86909831px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+           d="m -745.91038,702.41204 183.2278,-64.00037 c 17.41622,4.82349 34.8092,9.68882 44.7866,27.90221 27.36828,3.6683 49.33656,14.20932 62.75312,35.63434"
+           id="path3905"
+           inkscape:connector-curvature="0"
+           sodipodi:nodetypes="cccc" />
+        <path
+           sodipodi:nodetypes="cc"
+           style="fill:none;stroke:#000000;stroke-width:1.86909831px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+           d="m -632.22317,770.32107 176.79459,-66.62046"
+           id="path3907"
+           inkscape:connector-curvature="0" />
+        <path
+           inkscape:connector-curvature="0"
+           id="path3909"
+           d="m -632.62723,772.72378 177.19865,-66.88984"
+           style="fill:none;stroke:#000000;stroke-width:1.86909831px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+           sodipodi:nodetypes="cc" />
+        <path
+           sodipodi:nodetypes="cc"
+           style="fill:none;stroke:#000000;stroke-width:1.86909831px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+           d="m -632.8966,774.85711 176.65991,-66.48577"
+           id="path3911"
+           inkscape:connector-curvature="0" />
+        <path
+           inkscape:connector-curvature="0"
+           id="path3913"
+           d="m -633.70473,776.99044 177.33335,-66.48577"
+           style="fill:none;stroke:#000000;stroke-width:1.86909831px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+           sodipodi:nodetypes="cc" />
+        <path
+           sodipodi:nodetypes="cc"
+           style="fill:none;stroke:#000000;stroke-width:1.86909831px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+           d="m -633.70473,779.12378 177.60271,-66.75515"
+           id="path3915"
+           inkscape:connector-curvature="0" />
+      </g>
+      <g
+         inkscape:export-ydpi="89.617577"
+         inkscape:export-xdpi="89.617577"
+         inkscape:export-filename="/home/simon/Dropbox/Clients/Simon West/tux_writer.png"
+         transform="matrix(0.02295207,-0.07526725,0.07526725,0.02295207,618.54907,497.98957)"
+         id="g3942">
+        <path
+           style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1.06666672"
+           d="m -2304,-620.71842 c 50.4925,-24.45515 97.8159,-28.31139 140.1905,0 V 793.37676 L -2230.8572,1018.9006 -2304,793.37676 Z"
+           id="rect3929"
+           inkscape:connector-curvature="0"
+           sodipodi:nodetypes="cccccc" />
+        <path
+           style="fill:#ffff00;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1.06666672"
+           d="m -2292.9115,-610.09401 h 22.5509 V 777.72083 h -22.5509 z"
+           id="rect3932"
+           inkscape:connector-curvature="0" />
+        <rect
+           y="-610.09399"
+           x="-2251.8584"
+           height="1387.8148"
+           width="30.169891"
+           id="rect3934"
+           style="fill:#ffff00;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1.06666672" />
+        <path
+           style="fill:#ffccaa;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1.06666672"
+           d="m -2296.0412,791.17378 124.855,-4.57142 -36.2864,142.73062 -44.3781,2.32988 z"
+           id="rect3936"
+           inkscape:connector-curvature="0"
+           sodipodi:nodetypes="ccccc" />
+        <path
+           inkscape:connector-curvature="0"
+           id="path3940"
+           d="m -2196.9115,-610.09401 h 22.5509 V 777.72083 h -22.5509 z"
+           style="fill:#ffff00;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1.06666672" />
+      </g>
+      <path
+         inkscape:export-ydpi="89.617577"
+         inkscape:export-xdpi="89.617577"
+         inkscape:export-filename="/home/simon/Dropbox/Clients/Simon West/tux_writer.png"
+         sodipodi:nodetypes="sscssssssss"
+         inkscape:connector-curvature="0"
+         id="path2994"
+         d="m 553.14286,756.04345 c 27.42857,75.9891 41.67375,145.64823 31.99233,220.3869 -5.31373,41.02085 -38.83723,80.79875 -44.97018,104.01485 -56.38152,-0.4419 -167.4961,-33.3243 -224.73643,-21.9256 -46.85313,9.3303 -151.14607,39.148 -186.57054,-27.2512 -37.381809,-70.06796 94.81662,-330.22622 113.79562,-408.76614 10.65594,-44.09695 -27.29771,-67.45207 -23.22509,-102.64929 6.09524,-52.67756 28.87851,-107.62555 96.00001,-115.04762 60.21609,-6.65848 123.8281,52.00576 131.18514,110.04108 4.58317,36.15388 28.47462,70.5925 32.9928,115.01899 4.36164,42.88736 58.43049,84.32823 73.53634,126.17803 z"
+         style="fill:#000000;stroke:none;stroke-width:1.06666672" />
+      <path
+         inkscape:export-ydpi="89.617577"
+         inkscape:export-xdpi="89.617577"
+         inkscape:export-filename="/home/simon/Dropbox/Clients/Simon West/tux_writer.png"
+         style="fill:#ffffff;stroke:#000000;stroke-width:1.86909831"
+         d="m 553.14286,756.04345 c 26.18086,76.42796 41.67377,145.64823 31.99233,220.3869 -1.41286,10.90704 -1.86109,23.53668 -9.17652,32.16955 -7.64694,9.024 -65.55094,9.0687 -84.55557,9.3691 -20.31658,0.3212 -38.16139,-10.2072 -52.50104,-25.23821 -17.46733,-18.30952 -21.6588,-47.54864 -17.58173,-75.1809 2.12886,-25.57133 9.32724,-52.11814 14.23625,-79.20659 6.66525,-36.77971 5.70314,-75.7735 -1.19503,-109.71413 -11.66117,-57.3757 -18.48413,-106.82719 -4.45679,-115.82383 31.78107,-3.59226 19.09565,2.58839 42.45507,-16.37737 3.29599,16.4695 4.75796,23.18394 7.24669,33.43745 10.80032,44.49702 59.27255,84.53875 73.53634,126.17803 z"
+         id="path2997"
+         inkscape:connector-curvature="0"
+         sodipodi:nodetypes="ssssscssccss" />
+      <path
+         inkscape:export-ydpi="89.617577"
+         inkscape:export-xdpi="89.617577"
+         inkscape:export-filename="/home/simon/Dropbox/Clients/Simon West/tux_writer.png"
+         sodipodi:nodetypes="cscccssssssc"
+         inkscape:connector-curvature="0"
+         id="path2999"
+         d="m 554.47619,559.85299 c -0.21024,-7.05978 -8.45326,-17.01784 -18.09524,-17.90476 -39.76713,-3.65796 -65.98571,-15.37595 -95.80952,-27.04762 -2.15472,7.91178 -5.72593,13.3447 -9.90476,17.71429 -5.26985,2.04692 -10.53968,-1.8197 -15.80953,-3.42857 l -0.7619,68.57143 c -0.10592,9.53068 11.36501,15.31575 17.14286,17.14285 7.70515,2.43655 15.53799,0.65284 22.85714,-1.52381 3.97817,-1.18307 8.83965,-2.46821 10.85714,-6.09523 6.7092,-12.0617 28.42096,-24.83642 71.04762,-26.28572 5.99418,-0.2038 10.16705,-3.9934 13.33333,-7.42858 3.08428,-3.34619 5.1441,-7.42732 5.14286,-13.71428 z"
+         style="fill:#ffff00;stroke:none;stroke-width:1.06666672" />
+      <ellipse
+         inkscape:export-ydpi="89.617577"
+         inkscape:export-xdpi="89.617577"
+         inkscape:export-filename="/home/simon/Dropbox/Clients/Simon West/tux_writer.png"
+         transform="rotate(-35.584372)"
+         id="path3001"
+         style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1.3138181"
+         cx="57.599007"
+         cy="693.1203"
+         rx="5.1720819"
+         ry="7.7581224" />
+      <path
+         inkscape:export-ydpi="89.617577"
+         inkscape:export-xdpi="89.617577"
+         inkscape:export-filename="/home/simon/Dropbox/Clients/Simon West/tux_writer.png"
+         sodipodi:nodetypes="ssssssss"
+         inkscape:connector-curvature="0"
+         id="path3003"
+         d="m 458.28572,556.42443 c 0.83813,-0.69724 2.0007,0.85242 2.99934,1.26106 30.65317,12.54295 62.09533,14.70427 89.5966,6.65471 0.93053,-0.27236 2.94404,-1.64347 2.83263,-0.67768 -0.16731,1.4505 0.0266,2.03165 -1.62192,2.50386 -8.19829,2.34848 -22.4548,7.36481 -49.61618,4.35328 -31.83383,-3.5296 -36.23928,-8.67853 -42.48136,-11.61473 -0.97543,-0.45883 -2.4628,-1.85352 -1.70911,-2.4805 z"
+         style="fill:#000000;stroke:#000000;stroke-width:1.86909831px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+      <ellipse
+         inkscape:export-ydpi="89.617577"
+         inkscape:export-xdpi="89.617577"
+         inkscape:export-filename="/home/simon/Dropbox/Clients/Simon West/tux_writer.png"
+         transform="rotate(-7.1360887)"
+         id="path3005"
+         style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1.06666672"
+         cx="354.7818"
+         cy="547.1167"
+         rx="21.714287"
+         ry="34.380955" />
+      <ellipse
+         inkscape:export-ydpi="89.617577"
+         inkscape:export-xdpi="89.617577"
+         inkscape:export-filename="/home/simon/Dropbox/Clients/Simon West/tux_writer.png"
+         style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.96435457"
+         id="path3007"
+         transform="matrix(0.99450032,0.10473355,-0.05456762,0.99851008,0,0)"
+         cx="449.32364"
+         cy="457.18921"
+         rx="21.658319"
+         ry="28.174406" />
+      <ellipse
+         inkscape:export-ydpi="89.617577"
+         inkscape:export-xdpi="89.617577"
+         inkscape:export-filename="/home/simon/Dropbox/Clients/Simon West/tux_writer.png"
+         transform="matrix(0.99406845,0.10875625,-0.05253217,0.99861923,0,0)"
+         id="path3009"
+         style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.41945088"
+         cx="457.37814"
+         cy="460.46036"
+         rx="9.2450371"
+         ry="12.487042" />
+      <path
+         inkscape:export-ydpi="89.617577"
+         inkscape:export-xdpi="89.617577"
+         inkscape:export-filename="/home/simon/Dropbox/Clients/Simon West/tux_writer.png"
+         sodipodi:nodetypes="sssssssss"
+         inkscape:connector-curvature="0"
+         id="path3013"
+         d="m 586.28574,1039.7577 c -7.23521,24.0527 -20.70098,44.0953 -35.42858,44.0953 -14.72759,0 -14.50025,-20.8315 -17.90475,-44.0953 -2.08376,-14.2388 -13.25324,-81.67799 -4.00515,-104.63109 3.7036,-9.19205 27.38207,7.96446 31.6242,7.96446 3.04132,0 11.76434,-13.10314 17.53395,-12.48435 3.78282,0.40572 2.58556,5.16171 6.24591,4.92213 4.22287,-0.27639 -1.8117,-10.36207 9.05126,-7.86935 12.26887,2.81532 -4.18951,102.3667 -7.11684,112.0982 z"
+         style="fill:#ffff00;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1.06666672" />
+      <g
+         inkscape:export-ydpi="89.617577"
+         inkscape:export-xdpi="89.617577"
+         inkscape:export-filename="/home/simon/Dropbox/Clients/Simon West/tux_writer.png"
+         id="g3041">
+        <path
+           style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1.06666672"
+           d="M 600.16529,673.74256 C 607.1624,708.28805 507.3587,823.96233 460.36019,817.58828 422.47285,812.44991 306.43824,704.3655 321.63258,679.13004 c 17.2781,-28.69628 103.62427,39.53485 123.64267,61.95602 7.19129,8.05445 17.95313,21.02027 40.91769,3.70932 42.8426,-32.29523 109.71028,-92.09516 113.97235,-71.05282 z"
+           id="path3016"
+           inkscape:connector-curvature="0"
+           sodipodi:nodetypes="ssssss" />
+        <path
+           sodipodi:nodetypes="ssssss"
+           inkscape:connector-curvature="0"
+           id="path3027"
+           d="M 600.16529,673.74256 C 607.1624,708.28805 507.3587,823.96233 460.36019,817.58828 422.47285,812.44991 306.43824,704.3655 321.63258,679.13004 c 17.2781,-28.69628 103.62427,39.53485 123.64267,61.95602 7.19129,8.05445 17.95313,21.02027 40.91769,3.70932 42.8426,-32.29523 109.71028,-92.09516 113.97235,-71.05282 z"
+           style="fill:url(#radialGradient4027);fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1.06666672" />
+        <path
+           style="fill:url(#radialGradient4029);fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1.06666672"
+           d="M 600.16529,673.74256 C 607.1624,708.28805 507.3587,823.96233 460.36019,817.58828 422.47285,812.44991 306.43824,704.3655 321.63258,679.13004 c 17.2781,-28.69628 103.62427,39.53485 123.64267,61.95602 7.19129,8.05445 17.95313,21.02027 40.91769,3.70932 42.8426,-32.29523 109.71028,-92.09516 113.97235,-71.05282 z"
+           id="path3037"
+           inkscape:connector-curvature="0"
+           sodipodi:nodetypes="ssssss" />
+      </g>
+      <ellipse
+         inkscape:export-ydpi="89.617577"
+         inkscape:export-xdpi="89.617577"
+         inkscape:export-filename="/home/simon/Dropbox/Clients/Simon West/tux_writer.png"
+         transform="rotate(4.5611891)"
+         id="path3046"
+         style="fill:url(#radialGradient4031);fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1.06666672"
+         cx="364.46814"
+         cy="422.51639"
+         rx="73.269737"
+         ry="51.71981" />
+      <path
+         inkscape:export-ydpi="89.617577"
+         inkscape:export-xdpi="89.617577"
+         inkscape:export-filename="/home/simon/Dropbox/Clients/Simon West/tux_writer.png"
+         style="fill:url(#radialGradient4033);fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1.06666672"
+         d="m 586.28574,1039.7577 c -7.23521,24.0527 -20.70098,44.0953 -35.42858,44.0953 -14.72759,0 -14.50025,-20.8315 -17.90475,-44.0953 -2.08376,-14.2388 -13.25324,-81.67799 -4.00515,-104.63109 3.7036,-9.19205 27.38207,7.96446 31.6242,7.96446 3.04132,0 11.76434,-13.10314 17.53395,-12.48435 3.78282,0.40572 2.58556,5.16171 6.24591,4.92213 4.22287,-0.27639 -1.8117,-10.36207 9.05126,-7.86935 12.26887,2.81532 -4.18951,102.3667 -7.11684,112.0982 z"
+         id="path3116"
+         inkscape:connector-curvature="0"
+         sodipodi:nodetypes="sssssssss" />
+      <text
+         inkscape:export-ydpi="89.617577"
+         inkscape:export-xdpi="89.617577"
+         inkscape:export-filename="/home/simon/Dropbox/Clients/Simon West/tux_writer.png"
+         transform="rotate(53.508493)"
+         id="text3949"
+         y="-117.74632"
+         x="976.15961"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12.80000019px;line-height:0%;font-family:'Goblin One';-inkscape-font-specification:'Goblin One';text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1.06666672"
+         xml:space="preserve"><tspan
+           id="tspan3955"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:6.75481606px;line-height:1.25;font-family:Andalus;-inkscape-font-specification:Andalus;stroke-width:1.06666672"
+           y="-117.74632"
+           x="976.15961"
+           sodipodi:role="line">by</tspan></text>
+      <text
+         inkscape:export-ydpi="89.617577"
+         inkscape:export-xdpi="89.617577"
+         inkscape:export-filename="/home/simon/Dropbox/Clients/Simon West/tux_writer.png"
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12.80000019px;line-height:0%;font-family:'Goblin One';-inkscape-font-specification:'Goblin One';text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1.06666672"
+         x="977.64417"
+         y="-41.82914"
+         id="text3957"
+         transform="rotate(50.245907)"><tspan
+           sodipodi:role="line"
+           x="977.64417"
+           y="-41.82914"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:8.3730526px;line-height:1.25;font-family:Andalus;-inkscape-font-specification:Andalus;stroke-width:1.06666672"
+           id="tspan3963">Simon West</tspan></text>
+      <text
+         inkscape:export-ydpi="89.617577"
+         inkscape:export-xdpi="89.617577"
+         inkscape:export-filename="/home/simon/Dropbox/Clients/Simon West/tux_writer.png"
+         transform="rotate(45.038415)"
+         id="text3965"
+         y="8.5421839"
+         x="991.56116"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12.80000019px;line-height:0%;font-family:'Goblin One';-inkscape-font-specification:'Goblin One';text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1.06666672"
+         xml:space="preserve"><tspan
+           id="tspan3971"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11.60879612px;line-height:1.25;font-family:Andalus;-inkscape-font-specification:Andalus;stroke-width:1.06666672"
+           y="8.5421839"
+           x="991.56116"
+           sodipodi:role="line">Anvarin</tspan></text>
+    </g>
+  </g>
+</svg>
