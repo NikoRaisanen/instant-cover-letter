@@ -1,9 +1,12 @@
 import React, { useState, useEffect } from "react";
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import "../App.css";
 import "../loading.css";
 import ErrorPage from "./ErrorPage";
+import PdfUpload from "./PdfUpload";
+import PromptField from "./PromptField";
 
+// TODO: add logic here to handle both resume and text prompt
 function GeneratePage() {
   const [jd, setJd] = useState("");
   const [prompt, setPrompt] = useState("");
@@ -11,17 +14,20 @@ function GeneratePage() {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
   const [jdLength, setJdLength] = useState(0);
-  const [promptLength, setPromptLength] = useState(0);
+//   const [promptLength, setPromptLength] = useState(0);
   const [isButtonDisabled, setIsButtonDisabled] = useState(false);
   const navigate = useNavigate();
   const maxJdLength = 6000;
-  const maxPromptLength = 1000;
+  const location = useLocation();
+
 
   // redirect to result page after cover letter is generated
   useEffect(() => {
     if (coverLetter !== "") {
       navigate("/result", { state: { coverLetter } });
     }
+    console.log('use effect');
+    console.log('promptType: ', location.state.promptType);
   }, [coverLetter])
 
   const doTheMagic = async (): Promise<void> => {
@@ -60,18 +66,18 @@ function GeneratePage() {
     } 
   }
 
-  const handlePromptChange = (e: React.ChangeEvent<HTMLTextAreaElement>): void => {
-    setPrompt(e.target.value);
-    setPromptLength(e.target.value.length);
-    if (!isButtonDisabled && e.target.value.length > maxPromptLength) {
-      alert(`Your summary is too long. Please shorten it to ${maxPromptLength} characters or less`);
-      setIsButtonDisabled(true);
-    }
-    // re enable button if length is appropriate
-    else if (isButtonDisabled && e.target.value.length <= maxPromptLength) {
-      setIsButtonDisabled(false);
-    }
-  }
+//   const handlePromptChange = (e: React.ChangeEvent<HTMLTextAreaElement>): void => {
+//     setPrompt(e.target.value);
+//     setPromptLength(e.target.value.length);
+//     if (!isButtonDisabled && e.target.value.length > maxPromptLength) {
+//       alert(`Your summary is too long. Please shorten it to ${maxPromptLength} characters or less`);
+//       setIsButtonDisabled(true);
+//     }
+//     // re enable button if length is appropriate
+//     else if (isButtonDisabled && e.target.value.length <= maxPromptLength) {
+//       setIsButtonDisabled(false);
+//     }
+//   }
 
   if (error) {
     return (
@@ -88,14 +94,22 @@ function GeneratePage() {
     <br/>
     <textarea placeholder="Copy and paste a job description here" className="job-description" onChange={(e) => {handleJdChange(e)}}/>
 
-    <p className="titles">
+    {location.state.promptType === 'resume' ?
+        <PdfUpload/> : 
+        <PromptField
+            setPrompt={setPrompt}
+            setIsButtonDisabled={setIsButtonDisabled}
+            isButtonDisabled={isButtonDisabled}
+        />
+        }
+    {/* <p className="titles">
         Write a few sentences about your skills, experience, and what you're looking for
     </p>
     <br/>
     <label className="prompt-label">Characters remaining: {(maxPromptLength - promptLength) < 0 ? 0 : (maxPromptLength - promptLength)}</label>
     <br/>
     <textarea placeholder="If you want to include any specific experience, skills or projects in your cover letter you should write about it here. Providing more detail usually leads to better results" className="prompt" onChange={(e) => {handlePromptChange(e)}}/>
-    <br/>
+    <br/> */}
 
     {
       loading ? <div className="lds-ellipsis"><div></div><div></div><div></div><div></div></div> :

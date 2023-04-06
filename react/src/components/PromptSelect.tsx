@@ -1,4 +1,5 @@
 import react from 'react';
+import { redirect, useNavigate } from 'react-router-dom';
 import './promptSelect.css';
 // import promptImg from '../images/promptImg.svg';
 // import resumeImg from '../images/resumeImg.svg';
@@ -7,13 +8,32 @@ import file from '../images/file.svg'
 import '../App.css';
 
 const PromptSelect = (props: any) => {
+    const navigate = useNavigate();
+    const redirectWithState = (path: string, state: any) => {
+        setTimeout(() => {
+            navigate(path, { state });
+        }, 1000);
+    }
+    const handleSelection = async (e: any) => {
+        if (e.target.name === 'upload-resume') {
+            console.log('resume selection')
+            redirectWithState('/generate', { promptType: "resume" });
+        } else {
+            console.log('text prompt selection')
+            redirectWithState('/generate', { promptType: "text" });
+        }
+        // setTimeout(() => {
+        //     navigate('/generate', { state: { promptType: "resume" } });
+        // }, 1000);
+    }
+
     return (
         <>
         <div className="container">
         <div className="plans">
             <div className="title">How would you like to input your skills?</div>
             <label className="plan basic-plan" htmlFor="basic">
-            <input checked type="radio" name="plan" id="basic" />
+            <input type="radio" name="upload-resume" id="basic" onClick={(e) => handleSelection(e)}/>
             <div className="plan-content">
                 <img loading="lazy" src={file} alt=""/>
                 <div className="plan-details">
@@ -24,7 +44,7 @@ const PromptSelect = (props: any) => {
             </label>
 
             <label className="plan complete-plan" htmlFor="complete">
-            <input type="radio" id="complete" name="plan" />
+            <input type="radio" id="complete" name="text-prompt" onClick={(e) => handleSelection(e)}/>
             <div className="plan-content">
                 <img loading="lazy" src={keyboard} alt="" />
                 <div className="plan-details">
@@ -35,9 +55,6 @@ const PromptSelect = (props: any) => {
             </label>
         </div>
         </div>
-        {/* <button className="button accept-btn" style={{'marginTop': '100px', 'fontSize': '14px'}}>
-        Confirm
-        </button> */}
         </>
     );
 

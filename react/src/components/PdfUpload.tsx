@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import axios from 'axios';
 
+// TODO: disable button if filetype or size is invalid
 const PdfUpload = (props: any) => {
     const [selectedFile, setSelectedFile] = useState<any>(null);
 
