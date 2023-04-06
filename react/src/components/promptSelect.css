@@ -39,7 +39,7 @@
   background: #fff;
   border-radius: 20px;
   -webkit-box-shadow: 0px 8px 10px 0px #d8dfeb;
-  box-shadow: 0px 4px 10px 0px #d8dfeb;
+  box-shadow: 0px 2px 10px 0px #d8dfeb;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
@@ -88,12 +88,12 @@
 }
 
 .container .title {
-  font-size: 20px;
+  font-size: 30px;
   font-weight: 500;
   -ms-flex-preferred-size: 100%;
   flex-basis: 100%;
   color: #252f42;
-  margin-bottom: 20px;
+  margin-bottom: 100px;
 }
 
 .plans .plan .plan-details p {

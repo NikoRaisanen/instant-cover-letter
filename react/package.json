@@ -5,6 +5,7 @@
   "dependencies": {
     "@aws-sdk/client-s3": "^3.304.0",
     "@aws-sdk/s3-request-presigner": "^3.304.0",
+    "@fortawesome/fontawesome-svg-core": "^6.4.0",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
