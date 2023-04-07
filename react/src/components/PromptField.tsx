@@ -25,6 +25,7 @@ const PromptField = (props: any) => {
         <label className="prompt-label">Characters remaining: {(maxPromptLength - promptLength) < 0 ? 0 : (maxPromptLength - promptLength)}</label>
         <br/>
         <textarea placeholder="If you want to include any specific experience, skills or projects in your cover letter you should write about it here. Providing more detail usually leads to better results" className="prompt" onChange={(e) => {handlePromptChange(e)}}/>
+        <br/>
         </>
     );
 }
