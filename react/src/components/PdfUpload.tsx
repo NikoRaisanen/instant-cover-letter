@@ -1,14 +1,19 @@
 import { useState } from 'react';
 import axios from 'axios';
+import '../App.css';
+import upload2 from '../images/upload2.svg';
+import { faCheck } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 // TODO: disable button if filetype or size is invalid
 const PdfUpload = (props: any) => {
     const [selectedFile, setSelectedFile] = useState<any>(null);
 
     const onFileChange = (e: any) => {
+        // TODO: check file type. Only allow pdfs
+        console.log('file: ', e.target.files[0]); 
         setSelectedFile(e.target.files[0]);
     };
-
     const getPresignedUrl = async (): Promise<string> => {
       // TODO: change uri back to one beginning with npqp27hv70
       // search for both urls to ensure all are pointing to correct api
@@ -41,10 +46,20 @@ const PdfUpload = (props: any) => {
 
     return (
         <div className="pdf-upload">
-            <input type="file" onChange={(e) => onFileChange(e)} />
-                <button onClick={() => onFileUpload()}>
-                  Upload!
-                </button>
+          <p className="titles">
+            Upload Resume
+          </p>
+          <div style={{'marginBottom': '50px'}}>
+          <label>
+            <img className='upload-svg' src={upload2} width='80px' height='80px'/>
+            <input type="file" style={{'display': 'none'}} onChange={(e) => onFileChange(e)}/>
+          </label>
+          <br/>
+          {selectedFile &&
+          <span style={{'fontSize': '11px'}}>
+            {selectedFile.name} <FontAwesomeIcon icon={faCheck} style={{color: "#34b233",}} />
+          </span>}
+          </div>
         </div>
     );
 }

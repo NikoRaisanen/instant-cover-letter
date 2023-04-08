@@ -17,7 +17,7 @@
 
 textarea {
   margin-bottom: 50px;
-  border-radius: 10px;
+  border-radius: 20px;
   padding: 10px;
   max-width: 800px;
 }
@@ -104,4 +104,16 @@ a {
   float: left;
   margin-top: 10px;
   padding-left: 10%;
+}
+
+.upload-svg {
+  /* make border 80% opacity  */
+  border: 2px dashed rgba(255, 255, 255, 0.8);
+  border-style: dashed;
+  border-radius: 20px;
+  cursor: pointer;
+  padding: 80px;
+  padding-right: 350px;
+  padding-left: 350px;
+  /* margin-bottom: 50px; */
 }
