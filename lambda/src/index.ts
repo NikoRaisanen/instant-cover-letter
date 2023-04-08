@@ -17,10 +17,15 @@ type AwsEvent = {
         filename: string,
     },
     body: string,
+    isBase64Encoded: boolean,
 }
 
 exports.handler = async (event: AwsEvent) => {
     console.log('event', event)
+    if (event.isBase64Encoded) {
+        event.body = Buffer.from(event.body, 'base64').toString('utf-8');
+        console.log('decoded event.body', event.body);
+    }
 
     let response;
     try {
@@ -32,6 +37,7 @@ exports.handler = async (event: AwsEvent) => {
             return generateResponse(200, JSON.stringify(res));
         }
 
+        console.log('body', event.body)
         const body = JSON.parse(event.body);
         const { jobDescription } = body;
 

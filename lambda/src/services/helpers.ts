@@ -4,6 +4,10 @@ export const generateResponse = (statusCode: number, body: string): APIGatewayPr
     const response = {
         statusCode,
         body,
+        headers: {
+            "Access-Control-Allow-Origin": "*",
+            "Access-Control-Allow-Methods": "OPTIONS,POST,GET",
+        }
     };
     return response
 }

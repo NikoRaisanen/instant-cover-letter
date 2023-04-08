@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
+import axios from 'axios';
 import "../App.css";
 import "../loading.css";
 import ErrorPage from "./ErrorPage";
@@ -15,6 +16,7 @@ function GeneratePage() {
   const [error, setError] = useState("");
   const [jdLength, setJdLength] = useState(0);
   const [isButtonDisabled, setIsButtonDisabled] = useState(false);
+  const [resumeFile, setResumeFile] = useState<any>(null);
   const navigate = useNavigate();
   const maxJdLength = 6000;
   const location = useLocation();
@@ -31,16 +33,25 @@ function GeneratePage() {
 
   const doTheMagic = async (): Promise<void> => {
     setLoading(true);
+    let req;
+
+    if (resumeFile) {
+      // create req obj with approriate params. Upload resume to s3 before calling main lambda
+      await uploadResume();
+
+      req = {resumeS3Key: resumeFile.name};
+    } else {
+      req = {prompt};
+    }
+    req = {...req, jobDescription: jd};
+    console.log('req to send to lambda: ', req);
+    console.log('rstringified', JSON.stringify(req));
+
     try {
-      const uri = "https://npqp27hv70.execute-api.us-east-1.amazonaws.com/sorcery";
-      const response = await fetch(uri, {
-        method: "POST",
-        body: JSON.stringify({
-          prompt: prompt,
-          jobDescription: jd,
-        })
-      });
-      const res = await response.json();
+      const uri = "https://fg94zuh9s0.execute-api.us-east-1.amazonaws.com/sorcery";
+      const response = await axios.post(uri, JSON.stringify(req));
+      const res = response.data;
+      console.log('res: ', res);
       if (res.error) {
         return setError(res.error);
       }
@@ -65,6 +76,36 @@ function GeneratePage() {
     } 
   }
 
+  const getPresignedUrl = async (): Promise<string> => {
+    // TODO: change uri back to one beginning with npqp27hv70
+    // search for both urls to ensure all are pointing to correct api
+    const uri = "https://fg94zuh9s0.execute-api.us-east-1.amazonaws.com/presigned-url";
+    const response = await axios.get(uri, {
+      params: {
+        filename: resumeFile.name,
+      },
+    });
+    console.log('presigned url response: ', response);
+    console.log('stringify: ', JSON.stringify(response));
+    return response.data.presignedUrl;
+  }
+
+  const uploadFileToS3 = async (presigned: string): Promise<void> => {
+    const opts = {
+      headers: {
+        "Content-Type": resumeFile.type,
+      },
+    };
+   await axios.put(presigned, resumeFile, opts);
+  };
+
+  const uploadResume = async () => {       
+      const s3PutUrl = await getPresignedUrl();
+      console.log('s3 url: ', s3PutUrl);
+      await uploadFileToS3(s3PutUrl);
+      console.log('done uploading file');
+  };
+
   if (error) {
     return (
       <ErrorPage msg={error}/>
@@ -81,7 +122,10 @@ function GeneratePage() {
     <textarea placeholder="Copy and paste a job description here" className="job-description" onChange={(e) => {handleJdChange(e)}}/>
 
     {location.state.promptType === 'resume' ?
-        <PdfUpload/> : 
+        <PdfUpload
+          resumeFile={resumeFile}
+          setResumeFile={setResumeFile}
+        /> : 
         <PromptField
             setPrompt={setPrompt}
             setIsButtonDisabled={setIsButtonDisabled}
