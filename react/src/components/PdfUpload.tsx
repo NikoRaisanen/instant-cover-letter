@@ -45,19 +45,19 @@ const PdfUpload = (props: any) => {
     };
 
     return (
-        <div className="pdf-upload">
+        <div className="pdf-upload" style={{marginBottom: '50px'}}>
           <p className="titles">
             Upload Resume
           </p>
-          <div style={{'marginBottom': '50px'}}>
+          <div className='upload-container'>
           <label>
-            <img className='upload-svg' src={upload2} width='80px' height='80px'/>
+            <img className='upload-svg' src={upload2} width='80px' height='80px' style={{'padding': '30px', cursor: 'pointer'}}/>
             <input type="file" style={{'display': 'none'}} onChange={(e) => onFileChange(e)}/>
           </label>
           <br/>
           {selectedFile &&
-          <span style={{'fontSize': '11px'}}>
-            {selectedFile.name} <FontAwesomeIcon icon={faCheck} style={{color: "#34b233",}} />
+          <span style={{'fontSize': '14px'}}>
+            Filename: {selectedFile.name} <FontAwesomeIcon icon={faCheck} style={{color: "#34b233", paddingLeft: '10px'}} />
           </span>}
           </div>
         </div>

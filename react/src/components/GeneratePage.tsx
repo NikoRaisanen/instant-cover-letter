@@ -14,7 +14,6 @@ function GeneratePage() {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
   const [jdLength, setJdLength] = useState(0);
-//   const [promptLength, setPromptLength] = useState(0);
   const [isButtonDisabled, setIsButtonDisabled] = useState(false);
   const navigate = useNavigate();
   const maxJdLength = 6000;
@@ -66,19 +65,6 @@ function GeneratePage() {
     } 
   }
 
-//   const handlePromptChange = (e: React.ChangeEvent<HTMLTextAreaElement>): void => {
-//     setPrompt(e.target.value);
-//     setPromptLength(e.target.value.length);
-//     if (!isButtonDisabled && e.target.value.length > maxPromptLength) {
-//       alert(`Your summary is too long. Please shorten it to ${maxPromptLength} characters or less`);
-//       setIsButtonDisabled(true);
-//     }
-//     // re enable button if length is appropriate
-//     else if (isButtonDisabled && e.target.value.length <= maxPromptLength) {
-//       setIsButtonDisabled(false);
-//     }
-//   }
-
   if (error) {
     return (
       <ErrorPage msg={error}/>
@@ -101,15 +87,7 @@ function GeneratePage() {
             setIsButtonDisabled={setIsButtonDisabled}
             isButtonDisabled={isButtonDisabled}
         />
-        }
-    {/* <p className="titles">
-        Write a few sentences about your skills, experience, and what you're looking for
-    </p>
-    <br/>
-    <label className="prompt-label">Characters remaining: {(maxPromptLength - promptLength) < 0 ? 0 : (maxPromptLength - promptLength)}</label>
-    <br/>
-    <textarea placeholder="If you want to include any specific experience, skills or projects in your cover letter you should write about it here. Providing more detail usually leads to better results" className="prompt" onChange={(e) => {handlePromptChange(e)}}/>
-    <br/> */}
+      }
 
     {
       loading ? <div className="lds-ellipsis"><div></div><div></div><div></div><div></div></div> :
@@ -121,4 +99,4 @@ function GeneratePage() {
   );
 }
 
-export default GeneratePage;
+export default GeneratePage;  
