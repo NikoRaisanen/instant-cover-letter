@@ -111,7 +111,7 @@ a {
   border: 2px dashed rgba(255, 255, 255, 0.8);
   border-style: dashed;
   border-radius: 20px;
-  cursor: pointer;
+  /* cursor: pointer; */
   /* padding: 80px; */
   /* padding-right: 350px;
   padding-left: 350px; */

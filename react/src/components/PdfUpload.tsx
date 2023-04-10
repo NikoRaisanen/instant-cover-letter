@@ -7,9 +7,17 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 // TODO: disable button if filetype or size is invalid
 const PdfUpload = (props: any) => {
+    // only allow pdf files
+    const pdfCheck = (file: any) => {
+        if (file.type !== 'application/pdf') {
+            alert('Uploaded resume must be in pdf format');
+        }
+    };
+
     const onFileChange = (e: any) => {
         // TODO: check file type. Only allow pdfs
-        console.log('file: ', e.target.files[0]); 
+        console.log('file: ', e.target.files[0]);
+        pdfCheck(e.target.files[0]);
         props.setResumeFile(e.target.files[0]);
     };
 
