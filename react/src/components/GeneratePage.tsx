@@ -3,6 +3,8 @@ import { useLocation, useNavigate } from "react-router-dom";
 import axios from 'axios';
 import "../App.css";
 import "../loading.css";
+// import "react-tooltip/dist/react-tooltip.css";
+// import { Tooltip } from "react-tooltip";
 import ErrorPage from "./ErrorPage";
 import PdfUpload from "./PdfUpload";
 import PromptField from "./PromptField";
