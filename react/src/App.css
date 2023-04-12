@@ -106,16 +106,64 @@ a {
   padding-left: 10%;
 }
 
-.upload-container {
-  /* make border 80% opacity  */
-  border: 2px dashed rgba(255, 255, 255, 0.8);
-  border-style: dashed;
-  border-radius: 20px;
-  /* cursor: pointer; */
-  /* padding: 80px; */
-  /* padding-right: 350px;
-  padding-left: 350px; */
-  /* margin-bottom: 50px; */
-  padding: 10px;
-  max-width: 800px;
+/* Upload box css */
+#drag-n-drop-icon 
+{
+    width: 40px;
+    height: 40px;
+}
+
+#drop_zone {
+    border-radius: 20px;
+    text-align: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 16px;
+    padding: 40px;
+    max-width: 800px;
+}
+
+#file-upload {
+    display: none;
+}
+
+#file-upload-label {
+    display: inline-block;
+    line-height: 20px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: 400;
+    color: #1e8ae9;
+}
+
+.drag-n-drop-box-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.drop-label-text {
+    display: inline-block;
+    font-size: 15px;
+    line-height: 20px;
+    font-weight: 400;
+    color: #878D94;
+}
+
+.drop-label-container {
+    display: inline-block;
+    justify-items: center;
+    align-items: center;
+    white-space: nowrap;
+}
+
+.drop-label-filenames {
+    font-size: 12px;
+    line-height: 20px;
+    font-weight: 400;
+    color: #878D94;
 }

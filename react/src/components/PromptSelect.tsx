@@ -35,6 +35,7 @@ const PromptSelect = (props: any) => {
             <label className="plan basic-plan" htmlFor="basic">
             <input type="radio" name="upload-resume" id="basic" onClick={(e) => handleSelection(e)}/>
             <div className="plan-content">
+            {/* <span style={{color: 'red', fontSize: '14px'}}>beta</span> */}
                 <img loading="lazy" src={file} alt=""/>
                 <div className="plan-details">
                 <span>Upload Resume</span>
