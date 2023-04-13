@@ -107,63 +107,35 @@ a {
 }
 
 /* Upload box css */
-#drag-n-drop-icon 
-{
-    width: 40px;
-    height: 40px;
-}
-
-#drop_zone {
+.upload-box {
     border-radius: 20px;
-    text-align: center;
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
     margin-bottom: 16px;
     padding: 40px;
     max-width: 800px;
 }
 
-#file-upload {
-    display: none;
-}
-
 #file-upload-label {
-    display: inline-block;
-    line-height: 20px;
-    background: transparent;
-    border: none;
     cursor: pointer;
     font-size: 15px;
-    font-weight: 400;
     color: #1e8ae9;
 }
 
-.drag-n-drop-box-content {
+.upload-content-container {
     display: flex;
     flex-direction: column;
     align-items: center;
+    color: #cacdd1;
 }
 
-.drop-label-text {
+.drop-main-text {
     display: inline-block;
     font-size: 15px;
     line-height: 20px;
     font-weight: 400;
-    color: #878D94;
 }
 
-.drop-label-container {
-    display: inline-block;
-    justify-items: center;
-    align-items: center;
-    white-space: nowrap;
-}
-
-.drop-label-filenames {
+.drop-minor-text {
     font-size: 12px;
     line-height: 20px;
     font-weight: 400;
-    color: #878D94;
 }
