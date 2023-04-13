@@ -47,7 +47,7 @@ exports.handler = async (event: AwsEvent) => {
                 prompt = await parsePdf(body.resumeS3Key);
             } catch (err) {
                 console.error('Error parsing pdf: ', err);
-                throw new Error('Error parsing pdf');
+                throw new Error('Error parsing pdf. This is a beta feature, make sure that the file is not corrupt and try again');
             }
         } else {
             prompt = body.prompt

@@ -1,8 +1,6 @@
 import react from 'react';
-import { redirect, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import './promptSelect.css';
-// import promptImg from '../images/promptImg.svg';
-// import resumeImg from '../images/resumeImg.svg';
 import keyboard from '../images/keyboard.svg';
 import file from '../images/file.svg'
 import '../App.css';
@@ -12,7 +10,7 @@ const PromptSelect = (props: any) => {
     const redirectWithState = (path: string, state: any) => {
         setTimeout(() => {
             navigate(path, { state });
-        }, 1000);
+        }, 500);
     }
     const handleSelection = async (e: any) => {
         if (e.target.name === 'upload-resume') {
@@ -22,9 +20,6 @@ const PromptSelect = (props: any) => {
             console.log('text prompt selection')
             redirectWithState('/generate', { promptType: "text" });
         }
-        // setTimeout(() => {
-        //     navigate('/generate', { state: { promptType: "resume" } });
-        // }, 1000);
     }
 
     return (

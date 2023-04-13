@@ -127,6 +127,7 @@ function GeneratePage() {
         <PdfUpload
           resumeFile={resumeFile}
           setResumeFile={setResumeFile}
+          setIsButtonDisabled={setIsButtonDisabled}
         /> : 
         <PromptField
             setPrompt={setPrompt}

@@ -1,7 +1,5 @@
 import { useState, useEffect } from 'react';
-import axios from 'axios';
 import '../App.css';
-import upload from '../images/upload.svg';
 import { faCheck, faXmark, faCloudArrowUp } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import "react-tooltip/dist/react-tooltip.css";
@@ -10,10 +8,14 @@ import { Tooltip } from "react-tooltip";
 // TODO: disable button if filetype or size is invalid
 const PdfUpload = (props: any) => {
     const [fileErrors, setFileErrors] = useState<string[]>([]);
-    const [isValid, setIsValid] = useState(false);
+    const [isValid, setIsValid] = useState(true);
     const [isDragging, setIsDragging] = useState(false);
     const activatedBorder = '2px dashed rgba(255, 255, 255, 0.8)';
     const boxShadow = '0px 0px 9px 1px white';
+
+    useEffect(() => {
+        props.setIsButtonDisabled(!isValid)
+    }, [isValid]);
 
     const buildErrorMsg = () => {
         const uniq = fileErrors.filter((item,
