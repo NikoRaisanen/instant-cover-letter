@@ -4,6 +4,7 @@ import './promptSelect.css';
 import keyboard from '../images/keyboard.svg';
 import file from '../images/file.svg'
 import '../App.css';
+import { Tooltip } from "react-tooltip";
 
 const PromptSelect = (props: any) => {
     const navigate = useNavigate();
@@ -14,10 +15,8 @@ const PromptSelect = (props: any) => {
     }
     const handleSelection = async (e: any) => {
         if (e.target.name === 'upload-resume') {
-            console.log('resume selection')
             redirectWithState('/generate', { promptType: "resume" });
         } else {
-            console.log('text prompt selection')
             redirectWithState('/generate', { promptType: "text" });
         }
     }
@@ -25,25 +24,29 @@ const PromptSelect = (props: any) => {
     return (
         <>
         <div className="container">
-        <div className="plans">
+        <div className="options">
             <div className="title">How would you like to input your skills?</div>
-            <label className="plan basic-plan" htmlFor="basic">
-            <input type="radio" name="upload-resume" id="basic" onClick={(e) => handleSelection(e)}/>
-            <div className="plan-content">
-            {/* <span style={{color: 'red', fontSize: '14px'}}>beta</span> */}
+            <label className="option" htmlFor="resume">
+            <input type="radio" name="upload-resume" id="resume" onClick={(e) => handleSelection(e)}/>
+            <div data-tooltip-id="resume-option" className="option-content">
                 <img loading="lazy" src={file} alt=""/>
-                <div className="plan-details">
+                <div className="option-details">
                 <span>Upload Resume</span>
                 <p>Make sure your resume is in pdf format</p>
                 </div>
             </div>
+            <Tooltip
+                        id='resume-option'
+                        content='This is a beta feature, currently supports resumes up to 2 pages long'
+                        style={{backgroundColor: 'rgb(40, 44, 52, 0.9)', textAlign: 'left', fontSize: '12px', borderRadius: '10px', maxWidth: '250px'}}
+                    />
             </label>
 
-            <label className="plan complete-plan" htmlFor="complete">
-            <input type="radio" id="complete" name="text-prompt" onClick={(e) => handleSelection(e)}/>
-            <div className="plan-content">
+            <label className="option text-opt" htmlFor="text">
+            <input type="radio" id="text" name="text-prompt" onClick={(e) => handleSelection(e)}/>
+            <div className="option-content">
                 <img loading="lazy" src={keyboard} alt="" />
-                <div className="plan-details">
+                <div className="option-details">
                 <span>Text Prompt</span>
                 <p>Write about your skills and experience</p>
                 </div>

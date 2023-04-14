@@ -1,30 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap");
 
-/* * {
-  margin: 0;
-  padding: 0;
-} */
-
-/* body {
-  background: #ecf2fe;
-  height: 100vh;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  font-family: "Roboto", sans-serif;
-} */
-
-.plans {
+.options {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -47,17 +23,17 @@
   flex-wrap: wrap;
 }
 
-.plans .plan input[type="radio"] {
+.options .option input[type="radio"] {
   position: absolute;
   opacity: 0;
 }
 
-.plans .plan {
+.options .option {
   cursor: pointer;
   width: 48.5%;
 }
 
-.plans .plan .plan-content {
+.options .option .option-content {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -74,12 +50,12 @@
   position: relative;
 }
 
-.plans .plan .plan-content img {
+.options .option .option-content img {
   margin-right: 30px;
   height: 72px;
 }
 
-.plans .plan .plan-details span {
+.options .option .option-details span {
   margin-bottom: 10px;
   display: block;
   font-size: 20px;
@@ -96,18 +72,18 @@
   margin-bottom: 100px;
 }
 
-.plans .plan .plan-details p {
+.options .option .option-details p {
   color: #646a79;
   font-size: 14px;
   line-height: 18px;
 }
 
-.plans .plan .plan-content:hover {
+.options .option .option-content:hover {
   -webkit-box-shadow: 0px 3px 5px 0px #e8e8e8;
   box-shadow: 0px 3px 5px 0px #e8e8e8;
 }
 
-.plans .plan input[type="radio"]:checked + .plan-content:after {
+.options .option input[type="radio"]:checked + .option-content:after {
   content: "";
   position: absolute;
   height: 8px;
@@ -121,7 +97,7 @@
   box-shadow: 0px 0px 0px 2px #0066ff;
 }
 
-.plans .plan input[type="radio"]:checked + .plan-content {
+.options .option input[type="radio"]:checked + .option-content {
   border: 2px solid #216ee0;
   background: #eaf1fe;
   -webkit-transition: ease-in 0.3s;
@@ -130,7 +106,7 @@
 }
 
 @media screen and (max-width: 991px) {
-  .plans {
+  .options {
     margin: 0 20px;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -142,20 +118,20 @@
     padding: 40px;
   }
 
-  .plans .plan {
+  .options .option {
     width: 100%;
   }
 
-  .plan.complete-plan {
+  .plan.text-opt {
     margin-top: 20px;
   }
 
-  .plans .plan .plan-content .plan-details {
+  .options .option .option-content .option-details {
     width: 70%;
     display: inline-block;
   }
 
-  .plans .plan input[type="radio"]:checked + .plan-content:after {
+  .options .option input[type="radio"]:checked + .option-content:after {
     top: 45%;
     -webkit-transform: translate(-50%);
     -ms-transform: translate(-50%);
@@ -164,14 +140,14 @@
 }
 
 @media screen and (max-width: 767px) {
-  .plans .plan .plan-content .plan-details {
+  .options .option .option-content .option-details {
     width: 60%;
     display: inline-block;
   }
 }
 
 @media screen and (max-width: 540px) {
-  .plans .plan .plan-content img {
+  .options .option .plan-content img {
     margin-bottom: 20px;
     height: 56px;
     -webkit-transition: height 0.4s;
@@ -179,16 +155,16 @@
     transition: height 0.4s;
   }
 
-  .plans .plan input[type="radio"]:checked + .plan-content:after {
+  .options .option input[type="radio"]:checked + .option-content:after {
     top: 20px;
     right: 10px;
   }
 
-  .plans .plan .plan-content .plan-details {
+  .options .option .option-content .option-details {
     width: 100%;
   }
 
-  .plans .plan .plan-content {
+  .options .option .option-content {
     padding: 20px;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -200,7 +176,6 @@
   }
 }
 
-/* inspiration */
 .inspiration {
   font-size: 12px;
   margin-top: 50px;
@@ -213,7 +188,6 @@
   color: #666;
 }
 @media screen and (max-width: 767px) {
-  /* inspiration */
   .inspiration {
     display: none;
   }
