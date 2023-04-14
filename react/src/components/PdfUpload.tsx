@@ -5,7 +5,6 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import "react-tooltip/dist/react-tooltip.css";
 import { Tooltip } from "react-tooltip";
 
-// TODO: disable button if filetype or size is invalid
 const PdfUpload = (props: any) => {
     const [fileErrors, setFileErrors] = useState<string[]>([]);
     const [isValid, setIsValid] = useState(true);

@@ -15,6 +15,10 @@ const getTextContent = (pdfData: any) => {
         console.log(`length of text on page ${pageNum}: ${numTexts}`);
         for (let textNum = 0; textNum < numTexts; textNum++) {
             // TODO: pdfData.Pages[pageNum].Texts[textNum] is of type array, might need another loop... Hardcoding index 0 for now
+            if (pdfData.Pages[pageNum].Texts[textNum].R.length > 1) {
+                console.log('pdfData.Pages[pageNum].Texts[textNum].R.length: ', pdfData.Pages[pageNum].Texts[textNum].R.length);
+                console.log('pdfData.Pages[pageNum].Texts[textNum].R: ', pdfData.Pages[pageNum].Texts[textNum].R);
+            }
             const token = pdfData.Pages[pageNum].Texts[textNum].R[0].T
             if (token == "_") { continue };
             rawText = rawText.concat(token);

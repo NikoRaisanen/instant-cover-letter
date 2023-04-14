@@ -3,13 +3,10 @@ import { useLocation, useNavigate } from "react-router-dom";
 import axios from 'axios';
 import "../App.css";
 import "../loading.css";
-// import "react-tooltip/dist/react-tooltip.css";
-// import { Tooltip } from "react-tooltip";
 import ErrorPage from "./ErrorPage";
 import PdfUpload from "./PdfUpload";
 import PromptField from "./PromptField";
 
-// TODO: add logic here to handle both resume and text prompt
 function GeneratePage() {
   const [jd, setJd] = useState("");
   const [prompt, setPrompt] = useState("");
@@ -29,8 +26,6 @@ function GeneratePage() {
     if (coverLetter !== "") {
       navigate("/result", { state: { coverLetter } });
     }
-    console.log('use effect');
-    console.log('promptType: ', location.state.promptType);
   }, [coverLetter])
 
   const doTheMagic = async (): Promise<void> => {
