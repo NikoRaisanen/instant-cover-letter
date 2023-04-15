@@ -94,11 +94,15 @@ function GeneratePage() {
    await axios.put(presigned, resumeFile, opts);
   };
 
-  const uploadResume = async () => {       
-      const s3PutUrl = await getPresignedUrl();
-      console.log('s3 url: ', s3PutUrl);
-      await uploadFileToS3(s3PutUrl);
-      console.log('done uploading file');
+  const uploadResume = async () => {      
+    try {
+        const s3PutUrl = await getPresignedUrl();
+        await uploadFileToS3(s3PutUrl);
+    } catch (err: any) {
+        console.error(err);
+        setError(`error uploading file: ${err.message}`);
+    }
+      
   };
 
   if (error) {
