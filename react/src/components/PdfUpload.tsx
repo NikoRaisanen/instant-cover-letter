@@ -43,7 +43,6 @@ const PdfUpload = (props: any) => {
 
     const onFileChange = (e: any) => {
         setFileErrors([]);
-        console.log('file: ', e.target.files[0]);
         fileCheck(e.target.files[0]);
         props.setResumeFile(e.target.files[0]);
     };

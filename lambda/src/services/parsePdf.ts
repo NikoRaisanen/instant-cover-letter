@@ -39,7 +39,6 @@ export const parsePdf = async (s3Key: string): Promise<string> => {
         });
         const { Body } = await client.send(cmd);
         const buffer = await consumers.buffer(Body as Readable);
-        console.log('buffer: ', buffer);
         const pdfParser = new PDFParser();
         pdfParser.on("pdfParser_dataError", (errData: any) => {1
             console.error(errData);
