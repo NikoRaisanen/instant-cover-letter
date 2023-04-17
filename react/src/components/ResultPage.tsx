@@ -17,7 +17,7 @@ function ResultPage () {
       <h1>Your cover letter is ready!</h1>
       <textarea className="result" defaultValue={location.state.coverLetter}/>
       <br/>
-      <button className="button accept-btn" onClick={() => navigate("/generate")}>
+      <button className="button accept-btn" onClick={() => navigate("/get-started")}>
         Generate another!
       </button>
     </div>

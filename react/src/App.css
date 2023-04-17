@@ -17,7 +17,7 @@
 
 textarea {
   margin-bottom: 50px;
-  border-radius: 10px;
+  border-radius: 20px;
   padding: 10px;
   max-width: 800px;
 }
@@ -104,4 +104,38 @@ a {
   float: left;
   margin-top: 10px;
   padding-left: 10%;
+}
+
+/* Upload box css */
+.upload-box {
+    border-radius: 20px;
+    margin-bottom: 16px;
+    padding: 40px;
+    max-width: 800px;
+}
+
+#file-upload-label {
+    cursor: pointer;
+    font-size: 15px;
+    color: #1e8ae9;
+}
+
+.upload-content-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #cacdd1;
+}
+
+.drop-main-text {
+    display: inline-block;
+    font-size: 15px;
+    line-height: 20px;
+    font-weight: 400;
+}
+
+.drop-minor-text {
+    font-size: 12px;
+    line-height: 20px;
+    font-weight: 400;
 }
