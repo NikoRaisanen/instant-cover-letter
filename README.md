@@ -1,4 +1,4 @@
-# Cover Letter Generator
+# Instant Cover Letter
 https://instantcoverletter.dev/get-started
 
 No more writer's block!
