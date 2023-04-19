@@ -45,7 +45,7 @@ function GeneratePage() {
     console.log('rstringified', JSON.stringify(req));
 
     try {
-      const uri = "https://npqp27hv70.execute-api.us-east-1.amazonaws.com/sorcery";
+      const uri = "https://fg94zuh9s0.execute-api.us-east-1.amazonaws.com/sorcery";
       const response = await axios.post(uri, JSON.stringify(req));
       const res = response.data;
       console.log('res: ', res);
@@ -74,7 +74,7 @@ function GeneratePage() {
   }
 
   const getPresignedUrl = async (): Promise<string> => {
-    const uri = "https://npqp27hv70.execute-api.us-east-1.amazonaws.com/presigned-url";
+    const uri = "https://fg94zuh9s0.execute-api.us-east-1.amazonaws.com/presigned-url";
     const response = await axios.get(uri, {
       params: {
         filename: resumeFile.name,

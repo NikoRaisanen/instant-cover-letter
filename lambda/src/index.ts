@@ -1,6 +1,6 @@
 import { generateCoverLetter } from "./services/openai";
 import { parsePdf } from "./services/parsePdf";
-import { handlePresigned } from "./services/handlePresigned";
+import { handlePresigned, deleteFile } from "./services/helpers";
 import { generateResponse } from "./services/helpers";
 
 // TODO: look into lambda function urls to bypass 30s api gateway timeout
@@ -45,6 +45,8 @@ exports.handler = async (event: AwsEvent) => {
         if (body.resumeS3Key) {
             try {
                 prompt = await parsePdf(body.resumeS3Key);
+                // fire and forget
+                deleteFile(body.resumeS3Key);
             } catch (err) {
                 console.error('Error parsing pdf: ', err);
                 throw new Error('Error parsing pdf. This is a beta feature, make sure that the file is not corrupt and try again');
@@ -62,6 +64,6 @@ exports.handler = async (event: AwsEvent) => {
     } catch (err) {
         response = generateResponse(500, JSON.stringify({ error: err.message }));
     }
-    
+
     return response;
 };
