@@ -3,9 +3,6 @@ import { parsePdf } from "./services/parsePdf";
 import { handlePresigned, deleteFile } from "./services/helpers";
 import { generateResponse } from "./services/helpers";
 
-// TODO: look into lambda function urls to bypass 30s api gateway timeout
-// https://docs.aws.amazon.com/lambda/latest/dg/lambda-urls.html
-
 type AwsEvent = {
     requestContext: {
         http: {

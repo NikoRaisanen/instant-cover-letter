@@ -41,14 +41,11 @@ function GeneratePage() {
       req = {prompt};
     }
     req = {...req, jobDescription: jd};
-    console.log('req to send to lambda: ', req);
-    console.log('rstringified', JSON.stringify(req));
 
     try {
-      const uri = "https://fg94zuh9s0.execute-api.us-east-1.amazonaws.com/sorcery";
+      const uri = "https://24f7djjqadrk6qbr4esubxo5km0emahq.lambda-url.us-east-1.on.aws/sorcery";
       const response = await axios.post(uri, JSON.stringify(req));
       const res = response.data;
-      console.log('res: ', res);
       if (res.error) {
         return setError(res.error);
       }
@@ -74,14 +71,12 @@ function GeneratePage() {
   }
 
   const getPresignedUrl = async (): Promise<string> => {
-    const uri = "https://fg94zuh9s0.execute-api.us-east-1.amazonaws.com/presigned-url";
+    const uri = "https://24f7djjqadrk6qbr4esubxo5km0emahq.lambda-url.us-east-1.on.aws/presigned-url";
     const response = await axios.get(uri, {
       params: {
         filename: resumeFile.name,
       },
     });
-    console.log('presigned url response: ', response);
-    console.log('stringify: ', JSON.stringify(response));
     return response.data.presignedUrl;
   }
 
