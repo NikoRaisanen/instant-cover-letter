@@ -27,7 +27,6 @@ const getPresignedUrl = async (filename: string): Promise<string> => {
       const client = new S3Client({ region: "us-east-1" });
       const command = new PutObjectCommand(putObjectParams);
       const url = await getSignedUrl(client, command, { expiresIn: 3600 });
-      console.log('url in getpresignedurl: ', url);
       return url;
   
     } catch (err) {

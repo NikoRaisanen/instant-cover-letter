@@ -21,10 +21,8 @@ type AwsEvent = {
 }
 
 exports.handler = async (event: AwsEvent) => {
-    console.log('event', event)
     if (event.isBase64Encoded) {
         event.body = Buffer.from(event.body, 'base64').toString('utf-8');
-        console.log('decoded event.body', event.body);
     }
 
     let response;
@@ -37,7 +35,6 @@ exports.handler = async (event: AwsEvent) => {
             return generateResponse(200, JSON.stringify(res));
         }
 
-        console.log('body', event.body)
         const body = JSON.parse(event.body);
         const { jobDescription } = body;
 
@@ -45,11 +42,12 @@ exports.handler = async (event: AwsEvent) => {
         if (body.resumeS3Key) {
             try {
                 prompt = await parsePdf(body.resumeS3Key);
-                // fire and forget
-                deleteFile(body.resumeS3Key);
             } catch (err) {
                 console.error('Error parsing pdf: ', err);
                 throw new Error('Error parsing pdf. This is a beta feature, make sure that the file is not corrupt and try again');
+            } finally {
+                // fire and forget
+                deleteFile(body.resumeS3Key);
             }
         } else {
             prompt = body.prompt
