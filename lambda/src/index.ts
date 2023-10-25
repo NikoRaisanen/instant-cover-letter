@@ -27,7 +27,7 @@ exports.handler = async (event: AwsEvent) => {
 
     let response;
     try {
-        // if presigned-url route
+        console.info('invoked presigned-url route');
         const { method, path } = event.requestContext.http;
         if (method === 'GET' && path === '/presigned-url') {
             const { filename } = event.queryStringParameters;
@@ -35,6 +35,7 @@ exports.handler = async (event: AwsEvent) => {
             return generateResponse(200, JSON.stringify(res));
         }
 
+        console.log('invoked /sorcery route')
         const body = JSON.parse(event.body);
         const { jobDescription } = body;
 
@@ -43,7 +44,7 @@ exports.handler = async (event: AwsEvent) => {
             try {
                 prompt = await parsePdf(body.resumeS3Key);
             } catch (err) {
-                console.error('Error parsing pdf: ', err);
+                console.error(`Error parsing ${body.resumeS3Key}: ${err}`);
                 throw new Error('Error parsing pdf. This is a beta feature, make sure that the file is not corrupt and try again');
             }
         } else {
@@ -52,6 +53,7 @@ exports.handler = async (event: AwsEvent) => {
 
         const coverLetter = await generateCoverLetter(jobDescription, prompt);
         if (!coverLetter) {
+            console.error('no cover letter generated for prompt: ', prompt)
             throw new Error("ChatGPT could not create a cover letter from the provided information");
         }
         response = generateResponse(200, JSON.stringify({ coverLetter })); 
