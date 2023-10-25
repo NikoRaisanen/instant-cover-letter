@@ -40,17 +40,3 @@ export const handlePresigned = async (filename: string): Promise<object> => {
     const url = await getPresignedUrl(filename);
     return { presignedUrl: url };
 };
-
-export const deleteFile = async (filename: string): Promise<void> => {
-    const client = new S3Client({ region: "us-east-1" });
-    const command = new DeleteObjectCommand({
-        Bucket: RESUME_BUCKET,
-        Key: filename,
-    });
-    try {
-        await client.send(command);
-    } catch (err) {
-        console.error('Error deleting file: ', err);
-        throw new Error('Error deleting file');
-    }
-};
