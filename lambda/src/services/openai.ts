@@ -1,6 +1,6 @@
 import { Configuration, OpenAIApi } from "openai";
 import Constants from "../Constants";
-const { GPT_MODEL, SYSTEM_PROMPT } = Constants;
+const { GPT_MODEL, SYSTEM_PROMPT, SAMPLE_COVER_LETTER } = Constants;
 
 const buildOpenAi = async() => {
     const apiKey: string = process.env.OPENAI_API_KEY ?? "";
@@ -17,12 +17,13 @@ export const generateCoverLetter = async (jobDescription: string, prompt: string
         const completion = await openai.createChatCompletion({
             model: GPT_MODEL,
             temperature: 0.1,
+            presence_penalty: 1,
             messages: [
                 {
                     role: "system", content: SYSTEM_PROMPT
                 },
                 {
-                    role: "user", content: `This is the job description of the job that I want: ${jobDescription}`
+                    role: "user", content: `This is the job description of the job that I want: ${jobDescription}\nI want a cover letter that has a similar voice to this one: ${SAMPLE_COVER_LETTER}`
                 },
                 {
                     role: "user", content: prompt
