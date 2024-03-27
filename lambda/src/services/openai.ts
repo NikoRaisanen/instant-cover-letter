@@ -32,7 +32,6 @@ export const generateCoverLetter = async (jobDescription: string, prompt: string
         });
         return completion?.data?.choices[0]?.message?.content;
     } catch (err) {
-        console.log('Error generating cover letter: ', err);
         const msg = err.response.data.error.message
         throw new Error(msg)
     }
