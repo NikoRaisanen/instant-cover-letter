@@ -1,5 +1,5 @@
 const Constants = {
-    GPT_MODEL: "gpt-3.5-turbo",
+    GPT_MODEL: "gpt-4.1-mini",
     SYSTEM_PROMPT: `I want you to write a cover letter for the user, they are applying for jobs and want to get hired. They will send you a job description and some information about their experience and skills. Use a casual tone and get to the point, keep it under 500 words`,
     RESUME_BUCKET: "instantcoverletter-resumes",
     SAMPLE_COVER_LETTER: `
